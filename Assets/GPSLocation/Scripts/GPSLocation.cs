@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Android;
 
 public class GPSLocation : MonoBehaviour
 {
@@ -11,13 +12,34 @@ public class GPSLocation : MonoBehaviour
     public TextMeshProUGUI altitudeValue;
     public TextMeshProUGUI horizontalAccuracyValue;
     public TextMeshProUGUI timestampValue;
+    public Transform player;
+    public Transform Compass;
+    float playerX;
+    float playerY;
+    bool locationEnabled;
+    Gyroscope m_Gyro;
+    Quaternion phoneRotation;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(GPSLoc());
+        Permission.RequestUserPermission(Permission.FineLocation);
+    }
+    private void Awake()
+    {
+        //Set up and enable the gyroscope (check your device has one)
+        m_Gyro = Input.gyro;
+        m_Gyro.enabled = true;
+    }
+    private void Update()
+    {
+        if (!locationEnabled && Permission.HasUserAuthorizedPermission(Permission.FineLocation))
+        {
+            locationEnabled = true;
+            StartCoroutine(GPSLoc());
+        }
     }
 
-   IEnumerator GPSLoc()
+    IEnumerator GPSLoc()
     {
         //Check if the user has their location enabled
         if (!Input.location.isEnabledByUser)
@@ -68,6 +90,11 @@ public class GPSLocation : MonoBehaviour
             altitudeValue.text = Input.location.lastData.altitude.ToString();
             horizontalAccuracyValue.text = Input.location.lastData.horizontalAccuracy.ToString();
             timestampValue.text = Input.location.lastData.timestamp.ToString();
+            playerX = Input.location.lastData.latitude * 400000;
+            playerY = Input.location.lastData.longitude * 400000;
+            player.localPosition = new Vector3(playerX, playerY, 0);
+            phoneRotation = Input.gyro.attitude;
+            Compass.localRotation = new Quaternion(0,0,phoneRotation.z,phoneRotation.w);
         }
         else
         {
