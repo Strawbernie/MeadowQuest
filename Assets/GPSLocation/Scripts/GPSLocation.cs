@@ -94,7 +94,8 @@ public class GPSLocation : MonoBehaviour
             playerY = Input.location.lastData.longitude * 400000;
             player.localPosition = new Vector3(playerX, playerY, 0);
             phoneRotation = Input.gyro.attitude;
-            Compass.localRotation = new Quaternion(0,0,phoneRotation.z,phoneRotation.w);
+            player.localRotation = new Quaternion(0,0,phoneRotation.z,phoneRotation.w);
+            Compass.localRotation = new Quaternion(0, 0, phoneRotation.z, phoneRotation.w);
         }
         else
         {

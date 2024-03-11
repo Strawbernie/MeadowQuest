@@ -550,9 +550,6 @@ MonoBehaviour:
   timestampValue: {fileID: 197024445}
   player: {fileID: 585772496}
   Compass: {fileID: 920262646}
-  Camera: {fileID: 1249542380}
-  centralLatitude: 53.23902
-  centralLongitude: 6.531079
 --- !u!4 &337121389
 Transform:
   m_ObjectHideFlags: 0
@@ -776,8 +773,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d4af31c9cd405426488b1eaf34c38a9e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: d5c49cb73c0d94a42a0fdb236a7d5e35, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1768,7 +1765,7 @@ Transform:
   m_GameObject: {fileID: 1249542380}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21295608, y: 2612431.5, z: -10}
+  m_LocalPosition: {x: 21299726, y: 2416120.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
