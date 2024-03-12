@@ -15,8 +15,8 @@ public class ButtonManager : MonoBehaviour
 
     void Start()
     {
-        cameraX = latitude * 400000;
-        cameraY = longitude * 400000;
+        cameraX = longitude * 400000;
+        cameraY = latitude * 400000;
     }
 
     public void OnButtonPress()

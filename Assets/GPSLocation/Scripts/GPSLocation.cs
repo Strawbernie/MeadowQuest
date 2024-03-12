@@ -90,8 +90,8 @@ public class GPSLocation : MonoBehaviour
             altitudeValue.text = Input.location.lastData.altitude.ToString();
             horizontalAccuracyValue.text = Input.location.lastData.horizontalAccuracy.ToString();
             timestampValue.text = Input.location.lastData.timestamp.ToString();
-            playerX = Input.location.lastData.latitude * 400000;
-            playerY = Input.location.lastData.longitude * 400000;
+            playerX = Input.location.lastData.longitude * 400000;
+            playerY = Input.location.lastData.latitude * 400000;
             player.localPosition = new Vector3(playerX, playerY, 0);
             phoneRotation = Input.gyro.attitude;
             player.localRotation = new Quaternion(0,0,phoneRotation.z,phoneRotation.w);
