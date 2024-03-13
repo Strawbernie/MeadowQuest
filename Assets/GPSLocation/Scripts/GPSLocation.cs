@@ -19,6 +19,7 @@ public class GPSLocation : MonoBehaviour
     bool locationEnabled;
     Gyroscope m_Gyro;
     Quaternion phoneRotation;
+    public GameObject ARCamera;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +36,9 @@ public class GPSLocation : MonoBehaviour
         if (!locationEnabled && Permission.HasUserAuthorizedPermission(Permission.FineLocation))
         {
             locationEnabled = true;
+            playerX = Input.location.lastData.longitude * 400000;
+            playerY = Input.location.lastData.latitude * 400000;
+            ARCamera.transform.localPosition = new Vector3(playerX, 0, playerY);
             StartCoroutine(GPSLoc());
         }
     }
