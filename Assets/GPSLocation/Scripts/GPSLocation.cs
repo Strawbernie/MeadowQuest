@@ -19,9 +19,6 @@ public class GPSLocation : MonoBehaviour
     bool locationEnabled;
     Gyroscope m_Gyro;
     Quaternion phoneRotation;
-    public Transform XROrigin;
-    public float latitudeToSubtract;
-    public float longitudeToSubtract;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,8 +37,6 @@ public class GPSLocation : MonoBehaviour
             locationEnabled = true;
             playerX = Input.location.lastData.longitude * 400000;
             playerY = Input.location.lastData.latitude * 400000;
-            XROrigin.localPosition = new Vector3((Input.location.lastData.longitude-longitudeToSubtract)*400, 0, (Input.location.lastData.latitude - latitudeToSubtract)*400);
-            XROrigin.localRotation = new Quaternion(0,phoneRotation.y,0,phoneRotation.w);
             StartCoroutine(GPSLoc());
         }
     }
