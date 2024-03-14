@@ -1701,6 +1701,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 331264285}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &331264288 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2512387470528047738, guid: 48cb3fb68c91eb94999fd99957eb0cae,
+    type: 3}
+  m_PrefabInstance: {fileID: 331264285}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &332374253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,7 +1839,8 @@ MonoBehaviour:
   Camera1: {fileID: 1134200471}
   Map: {fileID: 742313437}
   FalseMap: {fileID: 266074021}
-  ARObjects: {fileID: 1455315907}
+  FalseMap1: {fileID: 1937237712}
+  FalseMap2: {fileID: 918295195}
 --- !u!114 &348013572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7508,7 +7515,9 @@ MonoBehaviour:
   timestampValue: {fileID: 1982332316}
   player: {fileID: 277955252}
   Compass: {fileID: 1605245629}
-  ARCamera: {fileID: 331264287}
+  XROrigin: {fileID: 331264288}
+  latitudeToSubtract: 53.24137
+  longitudeToSubtract: 6.5323706
 --- !u!4 &1343400193
 Transform:
   m_ObjectHideFlags: 0
@@ -8813,7 +8822,7 @@ Transform:
   m_GameObject: {fileID: 1455315907}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1095262, y: 2.3529625, z: -2.2557476}
+  m_LocalPosition: {x: 0, y: 2.3529625, z: -2.2557476}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9541,9 +9550,10 @@ MonoBehaviour:
   latitude: 53.24524
   longitude: 6.535233
   Camera1: {fileID: 1134200471}
-  Map: {fileID: 742313437}
+  Map: {fileID: 918295195}
   FalseMap: {fileID: 266074021}
-  ARObjects: {fileID: 1455315907}
+  FalseMap1: {fileID: 1937237712}
+  FalseMap2: {fileID: 742313437}
 --- !u!114 &1713287964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10037,7 +10047,8 @@ MonoBehaviour:
   Camera1: {fileID: 1134200471}
   Map: {fileID: 266074021}
   FalseMap: {fileID: 742313437}
-  ARObjects: {fileID: 1455315907}
+  FalseMap1: {fileID: 918295195}
+  FalseMap2: {fileID: 1937237712}
 --- !u!114 &1882979335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10400,7 +10411,8 @@ MonoBehaviour:
   Camera1: {fileID: 1134200471}
   Map: {fileID: 1937237712}
   FalseMap: {fileID: 742313437}
-  ARObjects: {fileID: 1455315907}
+  FalseMap1: {fileID: 266074021}
+  FalseMap2: {fileID: 918295195}
 --- !u!114 &1923240256
 MonoBehaviour:
   m_ObjectHideFlags: 0

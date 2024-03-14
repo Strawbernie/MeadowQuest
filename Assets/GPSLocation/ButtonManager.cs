@@ -12,7 +12,8 @@ public class ButtonManager : MonoBehaviour
     public Transform Camera1;
     public GameObject Map;
     public GameObject FalseMap;
-    public GameObject ARObjects;
+    public GameObject FalseMap1;
+    public GameObject FalseMap2;
 
     void Start()
     {
@@ -23,8 +24,9 @@ public class ButtonManager : MonoBehaviour
     public void OnButtonPress()
     {
         Camera1.localPosition = new Vector3(cameraX, cameraY, cameraZ);
-        ARObjects.transform.localPosition = new Vector3(cameraX, 0, cameraY);
         Map.SetActive(true);
         FalseMap.SetActive(false);
+        FalseMap1.SetActive(false);
+        FalseMap2.SetActive(false);
     }
 }
