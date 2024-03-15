@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Android;
+using Niantic.Lightship.Maps.Coordinates;
+using Niantic.Lightship.Maps;
 
 public class GPSLocation : MonoBehaviour
 {
@@ -12,8 +14,12 @@ public class GPSLocation : MonoBehaviour
     public TextMeshProUGUI altitudeValue;
     public TextMeshProUGUI horizontalAccuracyValue;
     public TextMeshProUGUI timestampValue;
+    public SerializableLatLng Location;
     public Transform player;
     public Transform Compass;
+    //public float DefaultLatitude;
+    //public float DefaultLongitude;
+    public LightshipMapView LMV;
     float playerX;
     float playerY;
     bool locationEnabled;
@@ -24,6 +30,7 @@ public class GPSLocation : MonoBehaviour
     {
         Permission.RequestUserPermission(Permission.FineLocation);
     }
+    
     private void Awake()
     {
         //Set up and enable the gyroscope (check your device has one)
@@ -35,8 +42,10 @@ public class GPSLocation : MonoBehaviour
         if (!locationEnabled && Permission.HasUserAuthorizedPermission(Permission.FineLocation))
         {
             locationEnabled = true;
-            playerX = Input.location.lastData.longitude * 400000;
-            playerY = Input.location.lastData.latitude * 400000;
+            player.localPosition = LMV.LatLngToScene(Location);
+            player.localPosition = new Vector3(player.localPosition.x, 50, player.localPosition.z);
+            //playerX = DefaultLongitude - Input.location.lastData.longitude;
+            // playerY = DefaultLatitude - Input.location.lastData.latitude;
             StartCoroutine(GPSLoc());
         }
     }
@@ -92,12 +101,14 @@ public class GPSLocation : MonoBehaviour
             altitudeValue.text = Input.location.lastData.altitude.ToString();
             horizontalAccuracyValue.text = Input.location.lastData.horizontalAccuracy.ToString();
             timestampValue.text = Input.location.lastData.timestamp.ToString();
-            playerX = Input.location.lastData.longitude * 400000;
-            playerY = Input.location.lastData.latitude * 400000;
-            player.localPosition = new Vector3(playerX, playerY, 0);
+            //playerX = DefaultLongitude - Input.location.lastData.longitude;
+           //playerY = DefaultLatitude - Input.location.lastData.latitude;
+           // player.localPosition = new Vector3(playerX, playerY, 0);
+            player.localPosition = LMV.LatLngToScene(Location);
+            player.localPosition = new Vector3(player.localPosition.x, 50, player.localPosition.z);
             phoneRotation = Input.gyro.attitude;
-            player.localRotation = new Quaternion(0,0,phoneRotation.z,phoneRotation.w);
-            Compass.localRotation = new Quaternion(0, 0, phoneRotation.z, phoneRotation.w);
+            //player.localRotation = new Quaternion(0, phoneRotation.z, 0,phoneRotation.w);
+            Compass.localRotation = new Quaternion(0, -phoneRotation.z, 0, phoneRotation.w);
         }
         else
         {

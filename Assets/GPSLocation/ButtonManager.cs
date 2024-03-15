@@ -17,13 +17,13 @@ public class ButtonManager : MonoBehaviour
 
     void Start()
     {
-        cameraX = longitude * 400000;
-        cameraY = latitude * 400000;
+        //cameraX = longitude * 400000;
+        //cameraY = latitude * 400000;
     }
 
     public void OnButtonPress()
     {
-        Camera1.localPosition = new Vector3(cameraX, cameraY, cameraZ);
+        //Camera1.localPosition = new Vector3(cameraX, cameraY, cameraZ);
         Map.SetActive(true);
         FalseMap.SetActive(false);
         FalseMap1.SetActive(false);

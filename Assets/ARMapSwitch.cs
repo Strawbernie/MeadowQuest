@@ -17,7 +17,7 @@ public class ARMapSwitch : MonoBehaviour
         if (!mapOpen)
         {
             mapOpen = true;
-            LocationButtons.SetActive(true);
+            //LocationButtons.SetActive(true);
             ButtonText.text = "To AR";
             MapCamera.SetActive(true);
             ARCamera.SetActive(false);
@@ -26,7 +26,7 @@ public class ARMapSwitch : MonoBehaviour
         else if (mapOpen)
         {
             mapOpen = false;
-            LocationButtons.SetActive(false);
+            //LocationButtons.SetActive(false);
             ButtonText.text = "To Map";
             MapCamera.SetActive(false);
             ARCamera.SetActive(true);
