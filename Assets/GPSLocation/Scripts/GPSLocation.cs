@@ -14,11 +14,8 @@ public class GPSLocation : MonoBehaviour
     public TextMeshProUGUI altitudeValue;
     public TextMeshProUGUI horizontalAccuracyValue;
     public TextMeshProUGUI timestampValue;
-    public SerializableLatLng Location;
+    private SerializableLatLng Location;
     public Transform player;
-    public Transform Compass;
-    //public float DefaultLatitude;
-    //public float DefaultLongitude;
     public LightshipMapView LMV;
     float playerX;
     float playerY;
@@ -42,10 +39,6 @@ public class GPSLocation : MonoBehaviour
         if (!locationEnabled && Permission.HasUserAuthorizedPermission(Permission.FineLocation))
         {
             locationEnabled = true;
-            player.localPosition = LMV.LatLngToScene(Location);
-            player.localPosition = new Vector3(player.localPosition.x, 50, player.localPosition.z);
-            //playerX = DefaultLongitude - Input.location.lastData.longitude;
-            // playerY = DefaultLatitude - Input.location.lastData.latitude;
             StartCoroutine(GPSLoc());
         }
     }
@@ -96,19 +89,20 @@ public class GPSLocation : MonoBehaviour
         {
             //Access to GPS values granted and initialized
             GPSStatus.text = "Running";
+            //Visually represent data
             latitudeValue.text = Input.location.lastData.latitude.ToString();
             longitudeValue.text = Input.location.lastData.longitude.ToString();
             altitudeValue.text = Input.location.lastData.altitude.ToString();
             horizontalAccuracyValue.text = Input.location.lastData.horizontalAccuracy.ToString();
             timestampValue.text = Input.location.lastData.timestamp.ToString();
-            //playerX = DefaultLongitude - Input.location.lastData.longitude;
-           //playerY = DefaultLatitude - Input.location.lastData.latitude;
-           // player.localPosition = new Vector3(playerX, playerY, 0);
+            //Get player location
+            Location = new SerializableLatLng(Input.location.lastData.latitude, Input.location.lastData.longitude);
+            //Calculate player location to scene position
             player.localPosition = LMV.LatLngToScene(Location);
             player.localPosition = new Vector3(player.localPosition.x, 50, player.localPosition.z);
+            //Get player phone rotation
             phoneRotation = Input.gyro.attitude;
-            //player.localRotation = new Quaternion(0, phoneRotation.z, 0,phoneRotation.w);
-            Compass.localRotation = new Quaternion(0, -phoneRotation.z, 0, phoneRotation.w);
+            player.localRotation = new Quaternion(0, -phoneRotation.z, 0, phoneRotation.w);
         }
         else
         {
