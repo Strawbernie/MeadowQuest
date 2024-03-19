@@ -4397,6 +4397,11 @@ PrefabInstance:
       propertyPath: _mapView
       value: 
       objectReference: {fileID: 7422904664173905202}
+    - target: {fileID: 7559527954806023482, guid: bc5d916f9dd5247d78249602eb079333,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 116
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
