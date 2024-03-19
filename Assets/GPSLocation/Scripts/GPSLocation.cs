@@ -34,7 +34,11 @@ public class GPSLocation : MonoBehaviour
     void ValueChangeCheck()
     {
         clippingValue = int.Parse(input.text);
-        ARCamera.farClipPlane = clippingValue;
+        //if clipping value is 0 or less, the game will freeze and return an error
+        if (clippingValue>0)
+        {
+            ARCamera.farClipPlane = clippingValue;
+        }
     }
     
     private void Awake()
