@@ -6012,7 +6012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonText: {fileID: 1453982434}
-  LocationButtons: {fileID: 0}
+  LocationButtons: {fileID: 2062027936}
   ARCamera: {fileID: 331264287}
   MapCamera: {fileID: 1960421608}
   PlayerIndicator: {fileID: 277955251}
@@ -12624,12 +12624,12 @@ PrefabInstance:
     - target: {fileID: 3716588115589434692, guid: a74bdcb9956a51047add9dc7b7c0c1c3,
         type: 3}
       propertyPath: _defaultLocation._latitude
-      value: 53.24933843943172
+      value: 53.23909424374614
       objectReference: {fileID: 0}
     - target: {fileID: 3716588115589434692, guid: a74bdcb9956a51047add9dc7b7c0c1c3,
         type: 3}
       propertyPath: _defaultLocation._longitude
-      value: 6.04031648752406
+      value: 6.531287617280152
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
