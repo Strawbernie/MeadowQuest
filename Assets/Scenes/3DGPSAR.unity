@@ -10197,6 +10197,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightshipMap
       objectReference: {fileID: 0}
+    - target: {fileID: 4679712108560714342, guid: 652c0f1d2f3184a959f719dbc90057a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4679712108560714345, guid: 652c0f1d2f3184a959f719dbc90057a4,
         type: 3}
       propertyPath: _mapTheme
@@ -10211,12 +10216,12 @@ PrefabInstance:
     - target: {fileID: 4679712108560714345, guid: 652c0f1d2f3184a959f719dbc90057a4,
         type: 3}
       propertyPath: _defaultLocation._latitude
-      value: 53.24931640747454
+      value: 53.2412915856475
       objectReference: {fileID: 0}
     - target: {fileID: 4679712108560714345, guid: 652c0f1d2f3184a959f719dbc90057a4,
         type: 3}
       propertyPath: _defaultLocation._longitude
-      value: 6.0403005902416425
+      value: 6.532271991982344
       objectReference: {fileID: 0}
     - target: {fileID: 4679712108560714347, guid: 652c0f1d2f3184a959f719dbc90057a4,
         type: 3}
