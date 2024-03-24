@@ -14072,12 +14072,12 @@ PrefabInstance:
     - target: {fileID: 3716588115589434692, guid: a74bdcb9956a51047add9dc7b7c0c1c3,
         type: 3}
       propertyPath: _defaultLocation._latitude
-      value: 53.2412915856475
+      value: 53.18028722275052
       objectReference: {fileID: 0}
     - target: {fileID: 3716588115589434692, guid: a74bdcb9956a51047add9dc7b7c0c1c3,
         type: 3}
       propertyPath: _defaultLocation._longitude
-      value: 6.532271991982344
+      value: 6.6025456515938075
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
