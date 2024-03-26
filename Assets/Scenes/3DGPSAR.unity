@@ -10216,12 +10216,12 @@ PrefabInstance:
     - target: {fileID: 4679712108560714345, guid: 652c0f1d2f3184a959f719dbc90057a4,
         type: 3}
       propertyPath: _defaultLocation._latitude
-      value: 53.18028722275052
+      value: 53.24125333040827
       objectReference: {fileID: 0}
     - target: {fileID: 4679712108560714345, guid: 652c0f1d2f3184a959f719dbc90057a4,
         type: 3}
       propertyPath: _defaultLocation._longitude
-      value: 6.6025456515938075
+      value: 6.532392674930687
       objectReference: {fileID: 0}
     - target: {fileID: 4679712108560714347, guid: 652c0f1d2f3184a959f719dbc90057a4,
         type: 3}
