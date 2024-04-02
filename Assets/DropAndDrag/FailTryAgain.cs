@@ -9,6 +9,7 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
 {
     public Image thisImage;
     public Vector3 startPosition;
+    public Drop dropArea;
 
     void Start()
     {
@@ -27,8 +28,20 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     {
         transform.position = startPosition;
         thisImage.raycastTarget = true;
+        if (!IsOverDropArea(dropArea.GetComponent<RectTransform>()))
+        {
+            dropArea.IsCorrect = false;
+        }
+    }
+
+    // Check if the draggable object is over the drop area
+    private bool IsOverDropArea(RectTransform dropAreaRect)
+    {
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(dropAreaRect, Input.mousePosition, null, out Vector2 localPoint);
+        return dropAreaRect.rect.Contains(localPoint);
     }
 }
+
  
 
 

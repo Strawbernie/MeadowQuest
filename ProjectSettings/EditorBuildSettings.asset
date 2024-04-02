@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/LinkInsects.unity
     guid: dbc4f29f7cfd7c04eb859c5778c2a834
+  - enabled: 1
+    path: Assets/LevelTest/Level2.unity
+    guid: f995c740876e93b4aaeb3a58cb55bb7e
   m_configObjects:
     Niantic.Lightship.AR.LightshipSettings: {fileID: 11400000, guid: 1160b54e87e055547a8600a8fb723405,
       type: 2}
