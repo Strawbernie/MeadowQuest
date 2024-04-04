@@ -15,7 +15,7 @@ public class Drop : MonoBehaviour, IDropHandler
             FailTryAgain draggable = eventData.pointerDrag.GetComponent<FailTryAgain>();
             if (draggable != null)
             {
-                draggable.startPosition = transform.position;
+                //draggable.startPosition = transform.position;
                 if (draggable.name == CorrectName)
                 {
                     IsCorrect = true;

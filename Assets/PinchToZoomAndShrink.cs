@@ -1,123 +1,79 @@
 using UnityEngine;
-using System.Collections;
+using UnityEngine.UI;
 
 public class PinchToZoomAndShrink : MonoBehaviour
 {
+    public ScrollRect scrollRect;
+    public float zoomSpeed = 0.1f;
+    public float minZoom = 0.5f;
+    public float maxZoom = 2f;
 
-    private static readonly float PanSpeed = 100f;
-    private static readonly float ZoomSpeedTouch = 0.1f;
-    private static readonly float ZoomSpeedMouse = 0.5f;
-
-    private static readonly float[] BoundsX = new float[] { -100f, 100f };
-    private static readonly float[] BoundsY = new float[] { -100, 100 };
-    private static readonly float[] ZoomBounds = new float[] { 10f, 85f };
-
-    private Camera cam;
-
-    public float perspectiveZoomSpeed = 0.5f;       
-    public float orthoZoomSpeed = 0.5f;
-
-    private Vector3 lastPanPosition;
-    private int panFingerId; // Touch mode only
-
-    private bool wasZoomingLastFrame; // Touch mode only
-    private Vector2[] lastZoomPositions; // Touch mode only
-
-    void Awake()
-    {
-        cam = GetComponent<Camera>();
-    }
+    public bool isDragging;
+    private Vector2 prevTouchPos;
+    private bool isZooming = false;
 
     void Update()
     {
-        if (Input.touchSupported && Application.platform != RuntimePlatform.WebGLPlayer)
+        HandleInput();
+    }
+
+    void HandleInput()
+    {
+        if(!isDragging)
         {
             if (Input.touchCount == 2)
             {
-                // Store both touches.
-                Touch touchZero = Input.GetTouch(0);
-                Touch touchOne = Input.GetTouch(1);
-
-                // Find the position in the previous frame of each touch.
-                Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
-                Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
-
-                // Find the magnitude of the vector (the distance) between the touches in each frame.
-                float prevTouchDeltaMag = (touchZeroPrevPos - touchOnePrevPos).magnitude;
-                float touchDeltaMag = (touchZero.position - touchOne.position).magnitude;
-
-                // Find the difference in the distances between each frame.
-                float deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
-
-                    // Otherwise change the field of view based on the change in distance between the touches.
-                    cam.fieldOfView += deltaMagnitudeDiff * perspectiveZoomSpeed;
-
-                    // Clamp the field of view to make sure it's between 0 and 180.
-                    cam.fieldOfView = Mathf.Clamp(cam.fieldOfView, 0.1f, 179.9f);
+                isZooming = true;
+                HandlePinchZoom();
+            }
+            else if (Input.touchCount == 1 && !isZooming)
+            {
+                HandlePan();
             }
             else
             {
-                HandleTouch();
+                isZooming = false;
             }
         }
-        else
-        {
-            HandleMouse();
-        }
     }
 
-    void HandleTouch()
+    void HandlePinchZoom()
     {
-        wasZoomingLastFrame = false;
+            Touch touchZero = Input.GetTouch(0);
+            Touch touchOne = Input.GetTouch(1);
 
-                // If the touch began, capture its position and its finger ID.
-                // Otherwise, if the finger ID of the touch doesn't match, skip it.
-                Touch touch = Input.GetTouch(0);
-                if (touch.phase == TouchPhase.Began)
-                {
-                    lastPanPosition = touch.position;
-                    panFingerId = touch.fingerId;
-                }
-                else if (touch.fingerId == panFingerId && touch.phase == TouchPhase.Moved)
-                {
-                    PanCamera(touch.position);
-                }
-                wasZoomingLastFrame = false;
+            Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
+            Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
+
+            float prevMagnitude = (touchZeroPrevPos - touchOnePrevPos).magnitude;
+            float currentMagnitude = (touchZero.position - touchOne.position).magnitude;
+
+            float difference = currentMagnitude - prevMagnitude;
+
+            Zoom(difference * zoomSpeed);
     }
 
-    void HandleMouse()
+    void HandlePan()
     {
-        // On mouse down, capture it's position.
-        // Otherwise, if the mouse is still down, pan the camera.
-        if (Input.GetMouseButtonDown(0))
+        Touch touch = Input.GetTouch(0);
+
+        if (touch.phase == TouchPhase.Moved)
         {
-            lastPanPosition = Input.mousePosition;
-        }
-        else if (Input.GetMouseButton(0))
-        {
-            PanCamera(Input.mousePosition);
+            Vector2 touchDelta = touch.position - prevTouchPos;
+            scrollRect.content.anchoredPosition += touchDelta;
         }
 
-        // Check for scrolling to zoom the camera
-        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        prevTouchPos = touch.position;
     }
 
-    void PanCamera(Vector3 newPanPosition)
+    void Zoom(float deltaMagnitudeDiff)
     {
-        // Determine how much to move the camera
-        Vector3 offset = cam.ScreenToViewportPoint(lastPanPosition - newPanPosition);
-        Vector3 move = new Vector3(offset.x * PanSpeed, offset.y * PanSpeed, 0);
+        float newOrthographicSize = scrollRect.content.localScale.x + deltaMagnitudeDiff;
 
-        // Perform the movement
-        transform.Translate(move, Space.World);
+        // Clamp zoom within min and max zoom range
+        newOrthographicSize = Mathf.Clamp(newOrthographicSize, minZoom, maxZoom);
 
-        // Ensure the camera remains within bounds.
-        Vector3 pos = transform.position;
-        pos.x = Mathf.Clamp(transform.position.x, BoundsX[0], BoundsX[1]);
-        pos.y = Mathf.Clamp(transform.position.y, BoundsY[0], BoundsY[1]);
-        transform.position = pos;
-
-        // Cache the position
-        lastPanPosition = newPanPosition;
+        // Update the scroll rect's viewport size
+        scrollRect.content.localScale = new Vector3(newOrthographicSize, newOrthographicSize, 1f);
     }
 }

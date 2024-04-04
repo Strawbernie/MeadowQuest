@@ -8,17 +8,37 @@ using UnityEngine.UI;
 public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     public Image thisImage;
-    public Vector3 startPosition;
+    private Vector3 startPosition;
     public Drop dropArea;
+    private PinchToZoomAndShrink Pinch;
+    bool correct;
 
     void Start()
     {
+        Pinch = FindObjectOfType<PinchToZoomAndShrink>();
         thisImage = GetComponent<Image>();
         startPosition = transform.position;
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<Drop>() == dropArea)
+        {
+            this.gameObject.transform.parent = other.transform;
+            transform.position = other.transform.position;
+            correct = true;
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.GetComponent<Drop>() == dropArea)
+        {
+            correct = false;
+        }
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
         thisImage.raycastTarget = false;
+        Pinch.isDragging = true;
     }
     public void OnDrag(PointerEventData eventData)
     {
@@ -26,7 +46,11 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-        transform.position = startPosition;
+        Pinch.isDragging = false;
+        if (!correct)
+        {
+            transform.position = startPosition;
+        }
         thisImage.raycastTarget = true;
         if (!IsOverDropArea(dropArea.GetComponent<RectTransform>()))
         {
