@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e36e51b286e17f499206a94d572b0ac, type: 3}
+  m_Name: Wild Pansy
+  m_EditorClassIdentifier: 
+  itemName: Wild Pansy
+  itemDescription: The Wild Pansy appears in various combinations of cream, yellow
+    and purple.
+  itemImage: {fileID: 21300000, guid: 99d39689c8f8885439413e8eb48c4d57, type: 3}
+  types: 2
+  colors: 4
+  colors1: 5
+  colors2: 8
+  seasons: 0
+  seasons1: 1
+  seasons2: 2
+  seasons3: 0
