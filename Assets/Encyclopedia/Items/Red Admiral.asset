@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e36e51b286e17f499206a94d572b0ac, type: 3}
+  m_Name: Red Admiral
+  m_EditorClassIdentifier: 
+  itemName: Red Admiral
+  itemDescription: The Red Admiral has black wings with red bands.
+  itemImage: {fileID: 21300000, guid: d0e5d16192f6419448a60af6273f3959, type: 3}
+  types: 0
+  colors: 1
+  colors1: 7
+  colors2: 0
+  seasons: 1
+  seasons1: 0
+  seasons2: 2
+  seasons3: 0

@@ -549,7 +549,7 @@ MonoBehaviour:
   horizontalAccuracyValue: {fileID: 978861204}
   timestampValue: {fileID: 197024445}
   player: {fileID: 585772496}
-  Compass: {fileID: 920262646}
+  LMV: {fileID: 0}
 --- !u!4 &337121389
 Transform:
   m_ObjectHideFlags: 0
@@ -1173,6 +1173,7 @@ MonoBehaviour:
   LocationButtons: {fileID: 1868081270}
   ARCamera: {fileID: 0}
   MapCamera: {fileID: 1249542380}
+  PlayerIndicator: {fileID: 0}
 --- !u!1 &654475452
 GameObject:
   m_ObjectHideFlags: 0
@@ -2554,6 +2555,8 @@ MonoBehaviour:
   Camera1: {fileID: 1249542383}
   Map: {fileID: 1578180117}
   FalseMap: {fileID: 882890644}
+  FalseMap1: {fileID: 0}
+  FalseMap2: {fileID: 0}
 --- !u!1 &1159739371
 GameObject:
   m_ObjectHideFlags: 0
@@ -3291,6 +3294,8 @@ MonoBehaviour:
   Camera1: {fileID: 1249542383}
   Map: {fileID: 882890644}
   FalseMap: {fileID: 1159739371}
+  FalseMap1: {fileID: 0}
+  FalseMap2: {fileID: 0}
 --- !u!1 &1578180117
 GameObject:
   m_ObjectHideFlags: 0
@@ -3517,6 +3522,8 @@ MonoBehaviour:
   Camera1: {fileID: 1249542383}
   Map: {fileID: 1159739371}
   FalseMap: {fileID: 882890644}
+  FalseMap1: {fileID: 0}
+  FalseMap2: {fileID: 0}
 --- !u!1 &1739590136
 GameObject:
   m_ObjectHideFlags: 0
