@@ -10,10 +10,16 @@ public class Translator : MonoBehaviour
     public string DutchText;
     void Start()
     {
-      OnValueChanged();
+        StartCoroutine(TranslateDelay());
+    }
+    //App needs time to translate everything, this prevents inconsistency
+    IEnumerator TranslateDelay()
+    {
+        yield return new WaitForSeconds(.2f);
+        OnValueChanged();
     }
 
-public void OnValueChanged()
+    public void OnValueChanged()
     {
         textToTranslate = GetComponent<TextMeshProUGUI>();
         EnglishText = textToTranslate.text;
