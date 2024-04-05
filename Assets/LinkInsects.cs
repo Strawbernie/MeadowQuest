@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LinkInsects : MonoBehaviour
 {
     public bool inScene;
+    public bool in2D;
 
     public void OnButtonPress()
     {
@@ -16,6 +17,17 @@ public class LinkInsects : MonoBehaviour
         else
         {
             SceneManager.LoadScene("LinkInsects");
+        }
+    }
+    public void SwitchMap()
+    {
+        if (in2D)
+        {
+            SceneManager.LoadScene("3DGPSAR");
+        }
+        else
+        {
+            SceneManager.LoadScene("GPSAR");
         }
     }
 }

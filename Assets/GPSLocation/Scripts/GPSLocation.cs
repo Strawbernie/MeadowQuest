@@ -17,6 +17,9 @@ public class GPSLocation : MonoBehaviour
     private SerializableLatLng Location;
     public Transform player;
     public LightshipMapView LMV;
+    public Camera ARCamera;
+    public TMP_InputField input;
+    int clippingValue;
     float playerX;
     float playerY;
     bool locationEnabled;
@@ -25,7 +28,17 @@ public class GPSLocation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        input.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
         Permission.RequestUserPermission(Permission.FineLocation);
+    }
+    void ValueChangeCheck()
+    {
+        clippingValue = int.Parse(input.text);
+        //if clipping value is 0 or less, the game will freeze and return an error
+        if (clippingValue>0)
+        {
+            ARCamera.farClipPlane = clippingValue;
+        }
     }
     
     private void Awake()
