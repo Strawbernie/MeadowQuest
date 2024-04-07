@@ -425,7 +425,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3876805942687605097}
   - component: {fileID: 5250441298705934112}
-  - component: {fileID: 7679903663961667112}
   m_Layer: 0
   m_Name: flowers white
   m_TagString: Untagged
@@ -469,27 +468,6 @@ MonoBehaviour:
   m_AttemptUpdate: 1
   m_MatchFrameRate: 1
   m_TrackingMode: 2
---- !u!135 &7679903663961667112
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5764118555162384616}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 1.5
-  m_Center: {x: -1.5, y: 0, z: 0}
 --- !u!1 &6271903105681832644
 GameObject:
   m_ObjectHideFlags: 0
