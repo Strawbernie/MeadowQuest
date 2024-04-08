@@ -381,7 +381,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 95444602}
-  - component: {fileID: 95444604}
   m_Layer: 0
   m_Name: flowers yellow(Clone)
   m_TagString: Untagged
@@ -410,21 +409,6 @@ Transform:
   - {fileID: 1072004415}
   m_Father: {fileID: 2058261263}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 230}
---- !u!114 &95444604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 95444601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3859a92a05d4f5d418cb6ca605290e74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AttemptUpdate: 1
-  m_MatchFrameRate: 1
-  m_TrackingMode: 2
 --- !u!1 &176536099
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,7 +1031,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 285331380}
-  - component: {fileID: 285331382}
   m_Layer: 0
   m_Name: flowers white(Clone)
   m_TagString: Untagged
@@ -1076,21 +1059,6 @@ Transform:
   - {fileID: 863494157}
   m_Father: {fileID: 2058261263}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 120}
---- !u!114 &285331382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 285331379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3859a92a05d4f5d418cb6ca605290e74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AttemptUpdate: 1
-  m_MatchFrameRate: 1
-  m_TrackingMode: 2
 --- !u!1 &296761011
 GameObject:
   m_ObjectHideFlags: 0
@@ -2214,7 +2182,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 410753576}
-  - component: {fileID: 410753578}
   m_Layer: 0
   m_Name: flowers red(Clone)
   m_TagString: Untagged
@@ -2243,21 +2210,6 @@ Transform:
   - {fileID: 1333503782}
   m_Father: {fileID: 2058261263}
   m_LocalEulerAnglesHint: {x: 0, y: 95, z: 0}
---- !u!114 &410753578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410753575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3859a92a05d4f5d418cb6ca605290e74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AttemptUpdate: 1
-  m_MatchFrameRate: 1
-  m_TrackingMode: 2
 --- !u!1 &418045382
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,7 +2834,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 582526070}
-  - component: {fileID: 582526072}
   m_Layer: 0
   m_Name: flowers blue(Clone)
   m_TagString: Untagged
@@ -2911,21 +2862,6 @@ Transform:
   - {fileID: 303403766}
   m_Father: {fileID: 2058261263}
   m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
---- !u!114 &582526072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 582526069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3859a92a05d4f5d418cb6ca605290e74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AttemptUpdate: 1
-  m_MatchFrameRate: 1
-  m_TrackingMode: 2
 --- !u!1 &608929165
 GameObject:
   m_ObjectHideFlags: 0
@@ -3278,7 +3214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &670043156
 Transform:
   m_ObjectHideFlags: 0
@@ -3923,7 +3859,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 684512814}
-  - component: {fileID: 684512815}
   m_Layer: 0
   m_Name: flowers yellow(Clone)
   m_TagString: Untagged
@@ -3952,21 +3887,6 @@ Transform:
   - {fileID: 544879042}
   m_Father: {fileID: 2058261263}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 230}
---- !u!114 &684512815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 684512813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3859a92a05d4f5d418cb6ca605290e74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AttemptUpdate: 1
-  m_MatchFrameRate: 1
-  m_TrackingMode: 2
 --- !u!1 &694780484
 GameObject:
   m_ObjectHideFlags: 0
@@ -4271,7 +4191,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 800625027}
-  - component: {fileID: 800625029}
   m_Layer: 0
   m_Name: flowers blue(Clone)
   m_TagString: Untagged
@@ -4300,21 +4219,6 @@ Transform:
   - {fileID: 887698147}
   m_Father: {fileID: 2058261263}
   m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
---- !u!114 &800625029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800625026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3859a92a05d4f5d418cb6ca605290e74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AttemptUpdate: 1
-  m_MatchFrameRate: 1
-  m_TrackingMode: 2
 --- !u!1 &812964944
 GameObject:
   m_ObjectHideFlags: 0
@@ -5403,7 +5307,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 976634205}
-  - component: {fileID: 976634207}
   m_Layer: 0
   m_Name: flowers white(Clone)
   m_TagString: Untagged
@@ -5432,21 +5335,6 @@ Transform:
   - {fileID: 225802148}
   m_Father: {fileID: 2058261263}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 120}
---- !u!114 &976634207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 976634204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3859a92a05d4f5d418cb6ca605290e74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AttemptUpdate: 1
-  m_MatchFrameRate: 1
-  m_TrackingMode: 2
 --- !u!1 &989749942
 GameObject:
   m_ObjectHideFlags: 0
@@ -5456,7 +5344,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 989749943}
-  - component: {fileID: 989749945}
   m_Layer: 0
   m_Name: flowers blue(Clone)
   m_TagString: Untagged
@@ -5485,21 +5372,6 @@ Transform:
   - {fileID: 608929166}
   m_Father: {fileID: 2058261263}
   m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
---- !u!114 &989749945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989749942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3859a92a05d4f5d418cb6ca605290e74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AttemptUpdate: 1
-  m_MatchFrameRate: 1
-  m_TrackingMode: 2
 --- !u!1 &1008266034
 GameObject:
   m_ObjectHideFlags: 0
@@ -5758,7 +5630,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1051447076}
-  - component: {fileID: 1051447078}
   m_Layer: 0
   m_Name: flowers purple 1(Clone)
   m_TagString: Untagged
@@ -5787,21 +5658,6 @@ Transform:
   - {fileID: 95153714}
   m_Father: {fileID: 2058261263}
   m_LocalEulerAnglesHint: {x: 0, y: 40, z: 0}
---- !u!114 &1051447078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1051447075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3859a92a05d4f5d418cb6ca605290e74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AttemptUpdate: 1
-  m_MatchFrameRate: 1
-  m_TrackingMode: 2
 --- !u!1 &1055165391
 GameObject:
   m_ObjectHideFlags: 0
@@ -6011,6 +5867,66 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1240519366}
   m_SourcePrefab: {fileID: 100100000, guid: b463312e733f42b49a97ed3aa4fee130, type: 3}
+--- !u!1 &1067055483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1067055485}
+  - component: {fileID: 1067055484}
+  - component: {fileID: 1067055486}
+  m_Layer: 0
+  m_Name: ARSession
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1067055484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067055483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3859a92a05d4f5d418cb6ca605290e74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AttemptUpdate: 1
+  m_MatchFrameRate: 1
+  m_TrackingMode: 2
+--- !u!4 &1067055485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067055483}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.5519724, y: 7.000133, z: 0.92428577}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1067055486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067055483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa850fbd5b8aded44846f96e35f1a9f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1072004414
 GameObject:
   m_ObjectHideFlags: 0
@@ -6103,7 +6019,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1104253537}
-  - component: {fileID: 1104253539}
   m_Layer: 0
   m_Name: flowers red(Clone)
   m_TagString: Untagged
@@ -6132,21 +6047,6 @@ Transform:
   - {fileID: 2025267584}
   m_Father: {fileID: 2058261263}
   m_LocalEulerAnglesHint: {x: 0, y: 95, z: 0}
---- !u!114 &1104253539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1104253536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3859a92a05d4f5d418cb6ca605290e74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AttemptUpdate: 1
-  m_MatchFrameRate: 1
-  m_TrackingMode: 2
 --- !u!1 &1112991051
 GameObject:
   m_ObjectHideFlags: 0
@@ -6706,7 +6606,7 @@ MonoBehaviour:
   m_Camera: {fileID: 176536105}
   m_OriginBaseGameObject: {fileID: 1145135947}
   m_CameraFloorOffsetObject: {fileID: 516371631}
-  m_RequestedTrackingOriginMode: 1
+  m_RequestedTrackingOriginMode: 2
   m_CameraYOffset: 0
 --- !u!4 &1145135951
 Transform:
@@ -6716,14 +6616,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145135947}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 1.18, z: 6.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 516371632}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1166526732
 GameObject:
   m_ObjectHideFlags: 0
@@ -6827,7 +6727,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1167180514
 Transform:
   m_ObjectHideFlags: 0
@@ -8518,7 +8418,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1413351689}
-  - component: {fileID: 1413351691}
   m_Layer: 0
   m_Name: flowers white(Clone)
   m_TagString: Untagged
@@ -8547,21 +8446,6 @@ Transform:
   - {fileID: 646980543}
   m_Father: {fileID: 2058261263}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 120}
---- !u!114 &1413351691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1413351688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3859a92a05d4f5d418cb6ca605290e74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AttemptUpdate: 1
-  m_MatchFrameRate: 1
-  m_TrackingMode: 2
 --- !u!1 &1418625081
 GameObject:
   m_ObjectHideFlags: 0
@@ -8903,7 +8787,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1510494703}
-  - component: {fileID: 1510494704}
   m_Layer: 0
   m_Name: flowers yellow(Clone)
   m_TagString: Untagged
@@ -8932,21 +8815,6 @@ Transform:
   - {fileID: 631816630}
   m_Father: {fileID: 2058261263}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 230}
---- !u!114 &1510494704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1510494702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3859a92a05d4f5d418cb6ca605290e74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AttemptUpdate: 1
-  m_MatchFrameRate: 1
-  m_TrackingMode: 2
 --- !u!1 &1539452930
 GameObject:
   m_ObjectHideFlags: 0
@@ -9720,7 +9588,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1654462359}
-  - component: {fileID: 1654462361}
   m_Layer: 0
   m_Name: flowers red(Clone)
   m_TagString: Untagged
@@ -9749,21 +9616,6 @@ Transform:
   - {fileID: 1464836409}
   m_Father: {fileID: 2058261263}
   m_LocalEulerAnglesHint: {x: 0, y: 95, z: 0}
---- !u!114 &1654462361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1654462358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3859a92a05d4f5d418cb6ca605290e74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AttemptUpdate: 1
-  m_MatchFrameRate: 1
-  m_TrackingMode: 2
 --- !u!1 &1672308805
 GameObject:
   m_ObjectHideFlags: 0
@@ -9939,7 +9791,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1711862239}
-  - component: {fileID: 1711862241}
   m_Layer: 0
   m_Name: flowers red(Clone)
   m_TagString: Untagged
@@ -9968,21 +9819,6 @@ Transform:
   - {fileID: 40577885}
   m_Father: {fileID: 2058261263}
   m_LocalEulerAnglesHint: {x: 0, y: 95, z: 0}
---- !u!114 &1711862241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711862238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3859a92a05d4f5d418cb6ca605290e74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AttemptUpdate: 1
-  m_MatchFrameRate: 1
-  m_TrackingMode: 2
 --- !u!1 &1754072477
 GameObject:
   m_ObjectHideFlags: 0
@@ -10988,7 +10824,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1925475239}
-  - component: {fileID: 1925475241}
   m_Layer: 0
   m_Name: flowers white(Clone)
   m_TagString: Untagged
@@ -11017,21 +10852,6 @@ Transform:
   - {fileID: 624436284}
   m_Father: {fileID: 2058261263}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 120}
---- !u!114 &1925475241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1925475238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3859a92a05d4f5d418cb6ca605290e74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AttemptUpdate: 1
-  m_MatchFrameRate: 1
-  m_TrackingMode: 2
 --- !u!1 &1944102658
 GameObject:
   m_ObjectHideFlags: 0
@@ -11124,7 +10944,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1945624564}
-  - component: {fileID: 1945624566}
   m_Layer: 0
   m_Name: flowers purple 1(Clone)
   m_TagString: Untagged
@@ -11153,21 +10972,6 @@ Transform:
   - {fileID: 311409120}
   m_Father: {fileID: 2058261263}
   m_LocalEulerAnglesHint: {x: 0, y: 40, z: 0}
---- !u!114 &1945624566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1945624563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3859a92a05d4f5d418cb6ca605290e74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AttemptUpdate: 1
-  m_MatchFrameRate: 1
-  m_TrackingMode: 2
 --- !u!1 &1974883066
 GameObject:
   m_ObjectHideFlags: 0
@@ -11343,7 +11147,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2021681293}
-  - component: {fileID: 2021681295}
   m_Layer: 0
   m_Name: flowers blue(Clone)
   m_TagString: Untagged
@@ -11372,21 +11175,6 @@ Transform:
   - {fileID: 1391955566}
   m_Father: {fileID: 2058261263}
   m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
---- !u!114 &2021681295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2021681292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3859a92a05d4f5d418cb6ca605290e74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AttemptUpdate: 1
-  m_MatchFrameRate: 1
-  m_TrackingMode: 2
 --- !u!1 &2025267583
 GameObject:
   m_ObjectHideFlags: 0
@@ -12091,3 +11879,4 @@ SceneRoots:
   - {fileID: 2058261263}
   - {fileID: 1058513861}
   - {fileID: 1616387726}
+  - {fileID: 1067055485}
