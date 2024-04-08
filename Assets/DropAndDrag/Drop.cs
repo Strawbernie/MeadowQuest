@@ -7,6 +7,9 @@ public class Drop : MonoBehaviour, IDropHandler
 {
     [SerializeField]
     string CorrectName;
+    public Transform MapParent;
+    public Transform FlowerParent;
+    public GameObject Flower;
     public bool IsCorrect = false;
     public void OnDrop(PointerEventData eventData)
     {
@@ -16,6 +19,7 @@ public class Drop : MonoBehaviour, IDropHandler
             if (draggable != null)
             {
                 draggable.startPosition = transform.position;
+                Flower.transform.SetParent(MapParent, true);
                 if (draggable.name == CorrectName)
                 {
                     IsCorrect = true;
