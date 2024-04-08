@@ -11,7 +11,9 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     private Vector3 startPosition;
     public Drop dropArea;
     private PinchToZoomAndShrink Pinch;
+    public FlowerButton flowerButton;
     bool correct;
+    bool dropped;
 
     void Start()
     {
@@ -21,10 +23,16 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     }
     void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag == "DropArea")
+        {
+            this.gameObject.transform.SetParent(other.transform);
+            transform.position = other.transform.position;
+            startPosition = other.transform.position;
+            flowerButton.resetButton();
+            dropped = true;
+        }
         if (other.gameObject.GetComponent<Drop>() == dropArea)
         {
-            this.gameObject.transform.parent = other.transform;
-            transform.position = other.transform.position;
             correct = true;
         }
     }
@@ -50,11 +58,6 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
         if (!correct)
         {
             transform.position = startPosition;
-        }
-        thisImage.raycastTarget = true;
-        if (!IsOverDropArea(dropArea.GetComponent<RectTransform>()))
-        {
-            dropArea.IsCorrect = false;
         }
     }
 
