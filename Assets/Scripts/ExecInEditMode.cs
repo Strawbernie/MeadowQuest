@@ -23,7 +23,7 @@ public class ExecInEditMode : MonoBehaviour
             for (int i = 0; i < numberOfObjectsToPlace; i++)
             {
                 Vector3 randomSpawnPosition = GetRandomSpawnPosition(); // new Vector3(Random.Range(-planeSize, planeSize), 1, Random.Range(-planeSize, planeSize));
-                GameObject instantiatedFlower = Instantiate(prefabs[Random.Range(0, prefabs.Length)], randomSpawnPosition, Quaternion.identity);
+                GameObject instantiatedFlower = Instantiate(prefabs[Random.Range(0, prefabs.Length)], randomSpawnPosition, Quaternion.Euler(0, Random.Range(0, 360), 0)); //set roation y to random value
                 instantiatedFlower.transform.parent = transform;
 
                 flowerPositions.Add(randomSpawnPosition);
