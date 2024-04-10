@@ -5,14 +5,29 @@ using UnityEngine.UI;
 
 public class SectionButtons : MonoBehaviour
 {
-    public Image background;
+    public Image[] levelImages;
     public string buttonName;
-    public Color newBackgroundColor;
+    public Color newLevelColor;
+
+    private Color redColor;
+    private Color orangeColor;
+    private Color yellowColor;
+    private Color blueColor;
+    private Color purpleColor;
 
     void Start() //makes the starting screen red
     {
+        redColor = new Color(0.8584906f, 0.1093361f, 0.1093361f);
+        orangeColor = new Color(0.9622642f, 0.4133903f, 0.1497864f);
+        yellowColor = new Color(0.8584906f, 0.6467649f, 0f);
+        blueColor = new Color(0.372549f, 0.7686275f, 0.7450981f);
+        purpleColor = new Color(0.4588235f, 0.6134286f, 0.8784314f);
+
         buttonName = gameObject.name;
-        background.color = new Color(0.909434f, 0.355194f, 0.355194f);
+        for (int i = 0; i < levelImages.Length; i++)
+        {
+            levelImages[i].color = redColor;
+        }
     }
 
     void Update() //makes the starting screen red
@@ -22,25 +37,28 @@ public class SectionButtons : MonoBehaviour
         switch (buttonName)
         {
             case "Flowers Button":
-                newBackgroundColor = new Color(0.909434f, 0.355194f, 0.355194f);
+                newLevelColor = redColor;
                 break;
             case "Butterflies Button":
-                newBackgroundColor = new Color(0.8593865f, 0.8784314f, 0.4588235f);
+                newLevelColor = orangeColor;
                 break;
             case "Bees Button":
-                newBackgroundColor = new Color(0.5438832f, 0.8784314f, 0.4588235f);
+                newLevelColor = yellowColor;
                 break;
             case "Bumblebees Button":
-                newBackgroundColor = new Color(0.4588235f, 0.8354726f, 0.8784314f);
+                newLevelColor = blueColor;
                 break;
             case "Other Button":
-                newBackgroundColor = new Color(0.4588235f, 0.6134286f, 0.8784314f);
+                newLevelColor = purpleColor;
                 break;
         }
     }
 
     public void OnSectionButtonClicked()
     {
-        background.color = newBackgroundColor;
+        for (int i = 0; i < levelImages.Length; i++)
+        {
+            levelImages[i].color = newLevelColor;
+        }
     }
 }
