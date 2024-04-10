@@ -13,9 +13,12 @@ public class StressTest : MonoBehaviour
 
     IEnumerator InstantiateFlower()
     {
-        for (int i = 0; i < 500; i++)
+        for (int i = 0; i < 167; i++)
         {
-            Instantiate(Flower, new Vector3(Random.Range(4.5F, -4.5F), 0, Random.Range(4.5F, -4.5F)),Quaternion.identity);
+            for (int q = 0; q < 50; q++)
+            {
+                Instantiate(Flower, new Vector3(Random.Range(7, -7), 0, Random.Range(8, -7)), Quaternion.identity);
+            }
             yield return new WaitForEndOfFrame();
         }
     }
