@@ -3010,8 +3010,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: a4ee3523c54fcee4ba78b0f712d2d8c5, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3761,6 +3761,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6318608337368017968, guid: 5dbec92b36a17a34f809abe05aceb4b6,
         type: 3}
+      propertyPath: m_text
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6318608337368017968, guid: 5dbec92b36a17a34f809abe05aceb4b6,
+        type: 3}
       propertyPath: m_fontSize
       value: 96.6
       objectReference: {fileID: 0}
@@ -4327,7 +4332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.45882353, g: 0.6134286, b: 0.8784314, a: 1}
+  m_Color: {r: 0.8980393, g: 0.8980393, b: 0.8980393, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4638,26 +4643,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3586735910158175798, guid: 5dbec92b36a17a34f809abe05aceb4b6,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6318608337368017968, guid: 5dbec92b36a17a34f809abe05aceb4b6,
-        type: 3}
-      propertyPath: m_text
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6318608337368017968, guid: 5dbec92b36a17a34f809abe05aceb4b6,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 96.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6318608337368017968, guid: 5dbec92b36a17a34f809abe05aceb4b6,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 96.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
