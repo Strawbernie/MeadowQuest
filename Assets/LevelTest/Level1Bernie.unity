@@ -2325,6 +2325,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 805040087}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &391093435 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4499204376920581484, guid: 2339cc914ed477f49a1bcb1ab60c22c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 805040087}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &408821075
 GameObject:
   m_ObjectHideFlags: 0
@@ -2338,7 +2344,7 @@ GameObject:
   - component: {fileID: 408821078}
   - component: {fileID: 408821077}
   m_Layer: 5
-  m_Name: UIOverlay
+  m_Name: NoPanArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5532,6 +5538,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas Level 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6366415302255076369, guid: 2339cc914ed477f49a1bcb1ab60c22c9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5483632792094090674, guid: 2339cc914ed477f49a1bcb1ab60c22c9, type: 3}
@@ -7633,7 +7644,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -453.23, y: 731.8048}
+  m_AnchoredPosition: {x: -453.23, y: 725.0001}
   m_SizeDelta: {x: 938.2527, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1247161942
@@ -7885,7 +7896,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 943.4578, y: 1463.6099}
+  m_SizeDelta: {x: 943.4578, y: 1450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1279440150
 MonoBehaviour:
@@ -8243,7 +8254,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 512726857}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.23833159
+  m_Size: 0.23611534
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9366,7 +9377,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15, y: 83.52001}
+  m_AnchoredPosition: {x: 15, y: -0.0001296997}
   m_SizeDelta: {x: 1454, y: 1591}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1421751655
@@ -9427,7 +9438,7 @@ MonoBehaviour:
   m_Inertia: 1
   m_DecelerationRate: 0.135
   m_ScrollSensitivity: 1
-  m_Viewport: {fileID: 0}
+  m_Viewport: {fileID: 391093435}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 0}
   m_HorizontalScrollbarVisibility: 0
@@ -13382,7 +13393,6 @@ GameObject:
   - component: {fileID: 1903448252}
   - component: {fileID: 1903448251}
   - component: {fileID: 1903448250}
-  - component: {fileID: 1903448254}
   m_Layer: 5
   m_Name: Canvas Encyclopedia
   m_TagString: Untagged
@@ -13473,20 +13483,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1903448254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1903448249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f1f92c208848bc4eae65c16e3410fd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items:
-  - {fileID: 0}
 --- !u!1 &1925113446
 GameObject:
   m_ObjectHideFlags: 0

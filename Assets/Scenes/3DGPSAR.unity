@@ -8647,16 +8647,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e940fd73d38e5f048bc3f0a481c9dce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GPSStatus: {fileID: 1916374539}
-  latitudeValue: {fileID: 291914768}
-  longitudeValue: {fileID: 1491380647}
-  altitudeValue: {fileID: 1399693901}
-  horizontalAccuracyValue: {fileID: 400460897}
-  timestampValue: {fileID: 1982332316}
   player: {fileID: 549113514}
   LMV: {fileID: 1453108699}
   ARCamera: {fileID: 331264290}
-  input: {fileID: 1413692316}
 --- !u!4 &1343400193
 Transform:
   m_ObjectHideFlags: 0

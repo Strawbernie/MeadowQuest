@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LanguagePicker : MonoBehaviour
 {
-    public GameObject LanguagePick;
     public void pickedDutch()
     {
         LanguageManager.isDutch = true;
@@ -13,10 +12,14 @@ public class LanguagePicker : MonoBehaviour
         {
             translator.OnValueChanged();
         }
-        LanguagePick.SetActive(false);
     }
     public void pickedEnglish()
     {
-        LanguagePick.SetActive(false);
+        LanguageManager.isDutch = false;
+        Translator[] translations = FindObjectsOfType<Translator>();
+        foreach (Translator translator in translations)
+        {
+            translator.OnValueChanged();
+        }
     }
 }

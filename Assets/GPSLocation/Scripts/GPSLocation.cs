@@ -8,17 +8,10 @@ using Niantic.Lightship.Maps;
 
 public class GPSLocation : MonoBehaviour
 {
-    public TextMeshProUGUI GPSStatus;
-    public TextMeshProUGUI latitudeValue;
-    public TextMeshProUGUI longitudeValue;
-    public TextMeshProUGUI altitudeValue;
-    public TextMeshProUGUI horizontalAccuracyValue;
-    public TextMeshProUGUI timestampValue;
     private SerializableLatLng Location;
     public Transform player;
     public LightshipMapView LMV;
     public Camera ARCamera;
-    public TMP_InputField input;
     int clippingValue;
     float playerX;
     float playerY;
@@ -28,18 +21,9 @@ public class GPSLocation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        input.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
         Permission.RequestUserPermission(Permission.FineLocation);
     }
-    void ValueChangeCheck()
-    {
-        clippingValue = int.Parse(input.text);
-        //if clipping value is 0 or less, the game will freeze and return an error
-        if (clippingValue>0)
-        {
-            ARCamera.farClipPlane = clippingValue;
-        }
-    }
+
     
     private void Awake()
     {
@@ -78,19 +62,16 @@ public class GPSLocation : MonoBehaviour
         //Service did not initialize in 20 seconds
         if(maxWaitingTime < 1)
         {
-            GPSStatus.text = "Time Out";
             yield break;
         }
 
         //Receiving Location failed
         if(Input.location.status == LocationServiceStatus.Failed)
         {
-            GPSStatus.text = "Unable to determine device location";
             yield break;
         }
         else
         {
-            GPSStatus.text = "Running";
             InvokeRepeating("UpdateGPSData", .5f, 1f);
             //Received User's Location
         }
@@ -101,13 +82,7 @@ public class GPSLocation : MonoBehaviour
         if (Input.location.status == LocationServiceStatus.Running)
         {
             //Access to GPS values granted and initialized
-            GPSStatus.text = "Running";
             //Visually represent data
-            latitudeValue.text = Input.location.lastData.latitude.ToString();
-            longitudeValue.text = Input.location.lastData.longitude.ToString();
-            altitudeValue.text = Input.location.lastData.altitude.ToString();
-            horizontalAccuracyValue.text = Input.location.lastData.horizontalAccuracy.ToString();
-            timestampValue.text = Input.location.lastData.timestamp.ToString();
             //Get player location
             Location = new SerializableLatLng(Input.location.lastData.latitude, Input.location.lastData.longitude);
             //Calculate player location to scene position
@@ -120,7 +95,6 @@ public class GPSLocation : MonoBehaviour
         else
         {
             // Service stopped
-            GPSStatus.text = "Stop";
         }
     }
 }

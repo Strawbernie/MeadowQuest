@@ -48,14 +48,14 @@ public class EncyclopediaManager : MonoBehaviour
         {
             filters.SetActive(true);
             filterOn = true;
-            scrollView.sizeDelta = new Vector2(1000, 1450);
+            scrollView.sizeDelta = new Vector2(1000, 1250);
             scrollContent.sizeDelta = new Vector2(-482, 725);
         }
         else
         {
             filters.SetActive(false);
             filterOn = false;
-            scrollView.sizeDelta = new Vector2(1000, 1850);
+            scrollView.sizeDelta = new Vector2(1000, 1450);
             scrollContent.sizeDelta = new Vector2(-482, 925);
         }
     }
