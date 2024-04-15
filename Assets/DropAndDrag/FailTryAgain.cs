@@ -25,6 +25,8 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     {
         if (other.gameObject.tag == "DropArea")
         {
+            Drop drop = other.transform.gameObject.GetComponent<Drop>();
+            drop.DestroyOld();
             this.gameObject.transform.SetParent(other.transform);
             transform.position = other.transform.position;
             startPosition = other.transform.position;
