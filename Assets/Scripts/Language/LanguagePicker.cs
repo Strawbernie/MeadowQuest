@@ -7,7 +7,7 @@ public class LanguagePicker : MonoBehaviour
     public void pickedDutch()
     {
         LanguageManager.isDutch = true;
-        Translator[] translations = FindObjectsOfType<Translator>();
+        Translator[] translations = Resources.FindObjectsOfTypeAll(typeof(Translator)) as Translator[];
         foreach (Translator translator in translations)
         {
             translator.OnValueChanged();
@@ -16,7 +16,7 @@ public class LanguagePicker : MonoBehaviour
     public void pickedEnglish()
     {
         LanguageManager.isDutch = false;
-        Translator[] translations = FindObjectsOfType<Translator>();
+        Translator[] translations = Resources.FindObjectsOfTypeAll(typeof(Translator)) as Translator[];
         foreach (Translator translator in translations)
         {
             translator.OnValueChanged();

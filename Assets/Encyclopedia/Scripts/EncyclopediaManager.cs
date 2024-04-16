@@ -13,17 +13,7 @@ public class EncyclopediaManager : MonoBehaviour
     public GameObject SeasonPopUp;
     public GameObject ColorPopUp;
     bool filterOn;
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void ResetButton()
     {
         List<ItemSlot> slots = new List<ItemSlot>();
@@ -61,7 +51,16 @@ public class EncyclopediaManager : MonoBehaviour
     }
     public void LooksLike()
     {
-        LooksLikePopUp.SetActive(true);
+        if (LooksLikePopUp.activeSelf)
+        {
+            LooksLikePopUp.SetActive(false);
+        }
+        else
+        {
+            LooksLikePopUp.SetActive(true);
+            SeasonPopUp.SetActive(false);
+            ColorPopUp.SetActive(false);
+        }
     }
     public void LooksLikeButterfly()
     {
@@ -113,7 +112,16 @@ public class EncyclopediaManager : MonoBehaviour
     }
     public void Color()
     {
-        ColorPopUp.SetActive(true);
+        if (ColorPopUp.activeSelf)
+        {
+            ColorPopUp.SetActive(false);
+        }
+        else
+        {
+            ColorPopUp.SetActive(true);
+            SeasonPopUp.SetActive(false);
+            LooksLikePopUp.SetActive(false);
+        }
     }
     public void Orange()
     {
@@ -277,7 +285,16 @@ public class EncyclopediaManager : MonoBehaviour
     }
     public void Season()
     {
-        SeasonPopUp.SetActive(true);
+        if (SeasonPopUp.activeSelf)
+        {
+            SeasonPopUp.SetActive(false);
+        }
+        else
+        {
+            SeasonPopUp.SetActive(true);
+            ColorPopUp.SetActive(false);
+            LooksLikePopUp.SetActive(false);
+        }
     }
     public void Spring()
     {

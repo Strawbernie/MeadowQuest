@@ -7,6 +7,13 @@ using UnityEngine.SceneManagement;
 public class GoToNextScreen : MonoBehaviour
 {
     public string screenOrSceneName;
+    [HideInInspector]
+    public string baseString;
+
+    public void Awake()
+    {
+        baseString = screenOrSceneName;
+    }
 
     public void OnButtonClickedGoToNextScreen()
     {

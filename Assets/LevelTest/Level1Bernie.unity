@@ -400,6 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenOrSceneName: 
+  baseString: 
 --- !u!114 &70914947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,7 +560,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d5fb1723b16cb7428af783379b5230f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LanguagePick: {fileID: 324412050}
 --- !u!1 &90745924
 GameObject:
   m_ObjectHideFlags: 0
