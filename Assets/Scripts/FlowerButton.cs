@@ -14,10 +14,12 @@ public class FlowerButton : MonoBehaviour
     private void Start()
     {
        button = GetComponent<Button>();
+        Pinch = FindObjectOfType(typeof(PinchToZoomAndShrink)) as PinchToZoomAndShrink;
     }
     public void OnButtonPress()
     {
         FailTryAgain newFlower = Instantiate(FlowerPrefab, this.transform.position, this.transform.rotation, this.transform);
+        newFlower.transform.localScale = new Vector3(Pinch.scrollRect.content.localScale.x/3, Pinch.scrollRect.content.localScale.x / 3, Pinch.scrollRect.content.localScale.x / 3);
         newFlower.dropArea = CorrectDropArea;
         newFlower.flowerButton = GetComponent<FlowerButton>();
         button.interactable = false;
