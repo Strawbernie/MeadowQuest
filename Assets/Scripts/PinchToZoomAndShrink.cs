@@ -24,7 +24,6 @@ public class PinchToZoomAndShrink : MonoBehaviour
             if (Input.touchCount == 2)
             {
                 isZooming = true;
-                HandlePinchZoom();
             }
             else if (Input.touchCount == 1 && !isZooming)
             {
@@ -37,21 +36,6 @@ public class PinchToZoomAndShrink : MonoBehaviour
         }
     }
 
-    void HandlePinchZoom()
-    {
-            Touch touchZero = Input.GetTouch(0);
-            Touch touchOne = Input.GetTouch(1);
-
-            Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
-            Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
-
-            float prevMagnitude = (touchZeroPrevPos - touchOnePrevPos).magnitude;
-            float currentMagnitude = (touchZero.position - touchOne.position).magnitude;
-
-            float difference = currentMagnitude - prevMagnitude;
-
-            Zoom(difference * zoomSpeed);
-    }
 
     void HandlePan()
     {
@@ -64,16 +48,5 @@ public class PinchToZoomAndShrink : MonoBehaviour
         }
 
         prevTouchPos = touch.position;
-    }
-
-    void Zoom(float deltaMagnitudeDiff)
-    {
-        float newOrthographicSize = scrollRect.content.localScale.x + deltaMagnitudeDiff;
-
-        // Clamp zoom within min and max zoom range
-        newOrthographicSize = Mathf.Clamp(newOrthographicSize, minZoom, maxZoom);
-
-        // Update the scroll rect's viewport size
-        scrollRect.content.localScale = new Vector3(newOrthographicSize, newOrthographicSize, 1f);
     }
 }
