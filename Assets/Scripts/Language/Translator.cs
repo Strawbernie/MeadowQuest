@@ -16,7 +16,7 @@ public class Translator : MonoBehaviour
     //App needs time to translate everything, this prevents inconsistency
     IEnumerator TranslateDelay()
     {
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.01f);
         OnValueChanged();
     }
 

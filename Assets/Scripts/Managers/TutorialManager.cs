@@ -16,9 +16,10 @@ public class TutorialManager : MonoBehaviour, IPointerDownHandler
     public GameObject Settings;
     public GameObject Ending;
     int tutorialStage;
+
     public void OnPointerDown(PointerEventData eventData)
     {
-        tutorialStage++;
+            tutorialStage++;
         switch (tutorialStage)
         {
             case 0:
@@ -54,6 +55,7 @@ public class TutorialManager : MonoBehaviour, IPointerDownHandler
                 Ending.SetActive(true);
                 break;
             case 8:
+                LevelsUnlocked.TutorialUnlocked = true;
                 tutorialStage = 0;
                 Ending.SetActive(false);
                 Intro.SetActive(true);
@@ -61,4 +63,5 @@ public class TutorialManager : MonoBehaviour, IPointerDownHandler
                 break;
         }
     }
+
 }

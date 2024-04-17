@@ -31,8 +31,8 @@ public class SectionButtons : MonoBehaviour
         for (int i = 0; i < levelImages.Length; i++)
         {
             levelImages[i].color = redColor;
-            GoToNextScreen button = levelImages[i].gameObject.GetComponent<GoToNextScreen>();
-            button.screenOrSceneName = button.baseString + "Flower";
+            LevelTransition button = levelImages[i].gameObject.GetComponent<LevelTransition>();
+            button.finalName = button.screenOrSceneName + "Flower";
         }
     }
 
@@ -46,8 +46,8 @@ public class SectionButtons : MonoBehaviour
                 newLevelColor = redColor;
                 for (int i = 0; i < levelImages.Length; i++)
                 {
-                    GoToNextScreen button = levelImages[i].gameObject.GetComponent<GoToNextScreen>();
-                    button.screenOrSceneName = button.baseString + "Flower";
+                    LevelTransition button = levelImages[i].gameObject.GetComponent<LevelTransition>();
+                    button.finalName = button.screenOrSceneName + "Flower";
                     levelUnlocker.UnlockedFlower();
                 }
                 break;
@@ -55,8 +55,8 @@ public class SectionButtons : MonoBehaviour
                 newLevelColor = orangeColor;
                 for (int i = 0; i < levelImages.Length; i++)
                 {
-                    GoToNextScreen button = levelImages[i].gameObject.GetComponent<GoToNextScreen>();
-                    button.screenOrSceneName = button.baseString + "Butterfly";
+                    LevelTransition button = levelImages[i].gameObject.GetComponent<LevelTransition>();
+                    button.finalName = button.screenOrSceneName + "Butterfly";
                     levelUnlocker.UnlockedButterfly();
                 }
                 break;
@@ -64,24 +64,24 @@ public class SectionButtons : MonoBehaviour
                 newLevelColor = yellowColor;
                 for (int i = 0; i < levelImages.Length; i++)
                 {
-                    GoToNextScreen button = levelImages[i].gameObject.GetComponent<GoToNextScreen>();
-                    button.screenOrSceneName = button.baseString + "Bee";
+                    LevelTransition button = levelImages[i].gameObject.GetComponent<LevelTransition>();
+                    button.finalName = button.screenOrSceneName + "Bee";
                 }
                 break;
             case "Bumblebees Button":
                 newLevelColor = blueColor;
                 for (int i = 0; i < levelImages.Length; i++)
                 {
-                    GoToNextScreen button = levelImages[i].gameObject.GetComponent<GoToNextScreen>();
-                    button.screenOrSceneName = button.baseString + "Bumblebee";
+                    LevelTransition button = levelImages[i].gameObject.GetComponent<LevelTransition>();
+                    button.finalName = button.screenOrSceneName + "Bumblebee";
                 }
                 break;
             case "Other Button":
                 newLevelColor = purpleColor;
                 for (int i = 0; i < levelImages.Length; i++)
                 {
-                    GoToNextScreen button = levelImages[i].gameObject.GetComponent<GoToNextScreen>();
-                    button.screenOrSceneName = button.baseString + "Other";
+                    LevelTransition button = levelImages[i].gameObject.GetComponent<LevelTransition>();
+                    button.finalName = button.screenOrSceneName + "Other";
                 }
                 break;
         }
