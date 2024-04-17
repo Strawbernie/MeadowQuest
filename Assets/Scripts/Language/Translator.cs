@@ -6,10 +6,11 @@ using TMPro;
 public class Translator : MonoBehaviour
 {
     TextMeshProUGUI textToTranslate;
-    string EnglishText;
     public string DutchText;
+    public string EnglishText;
     void Start()
     {
+        textToTranslate = GetComponent<TextMeshProUGUI>();
         StartCoroutine(TranslateDelay());
     }
     //App needs time to translate everything, this prevents inconsistency
@@ -22,10 +23,13 @@ public class Translator : MonoBehaviour
     public void OnValueChanged()
     {
         textToTranslate = GetComponent<TextMeshProUGUI>();
-        EnglishText = textToTranslate.text;
         if (LanguageManager.isDutch)
         {
             textToTranslate.text = DutchText;
+        }
+        else
+        {
+            textToTranslate.text = EnglishText;
         }
     }
 }

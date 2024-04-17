@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class LanguagePicker : MonoBehaviour
 {
+    public GameObject canvas;
+    public GameObject mainScreen;
+    private void Awake()
+    {
+        ItemSlot[] itemSlots = Resources.FindObjectsOfTypeAll(typeof(ItemSlot)) as ItemSlot[];
+        foreach (ItemSlot itemSlot in itemSlots)
+        {
+            itemSlot.GatherInfo();
+        }
+    }
     public void pickedDutch()
     {
         LanguageManager.isDutch = true;
@@ -12,6 +22,8 @@ public class LanguagePicker : MonoBehaviour
         {
             translator.OnValueChanged();
         }
+        canvas.SetActive(false);
+        mainScreen.SetActive(true);
     }
     public void pickedEnglish()
     {
@@ -21,5 +33,7 @@ public class LanguagePicker : MonoBehaviour
         {
             translator.OnValueChanged();
         }
+        canvas.SetActive(false);
+        mainScreen.SetActive(true);
     }
 }

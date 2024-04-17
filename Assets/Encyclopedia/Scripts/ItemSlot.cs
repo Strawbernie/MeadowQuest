@@ -11,14 +11,18 @@ public class ItemSlot : MonoBehaviour
     public TextMeshProUGUI Description;
     private Image Image;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
+    {
+        GatherInfo();
+    }
+    
+    public void GatherInfo()
     {
         Image = GetComponent<Image>();
         Name.text = item.itemName;
         Description.text = item.itemDescription;
         Image.sprite = item.itemImage;
     }
-
     // Update is called once per frame
     void Update()
     {
