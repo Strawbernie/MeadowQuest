@@ -21,7 +21,6 @@ public class FlowerButton : MonoBehaviour
         FailTryAgain newFlower = Instantiate(FlowerPrefab, this.transform.position, this.transform.rotation, this.transform);
         newFlower.transform.localScale = new Vector3(Pinch.scrollRect.content.localScale.x/3, Pinch.scrollRect.content.localScale.x / 3, Pinch.scrollRect.content.localScale.x / 3);
         newFlower.dropArea = CorrectDropArea;
-        newFlower.flowerButton = GetComponent<FlowerButton>();
         button.interactable = false;
     }
     public void OnBeginDrag(PointerEventData eventData)

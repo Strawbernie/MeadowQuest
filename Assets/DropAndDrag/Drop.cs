@@ -31,6 +31,7 @@ public class Drop : MonoBehaviour, IDropHandler
         oldDraggable = newDraggable;
         if (oldDraggable != null)
         {
+            oldDraggable.newSpawn = false;
             Destroy(oldDraggable.gameObject);
         }
     }

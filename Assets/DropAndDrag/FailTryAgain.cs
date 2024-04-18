@@ -7,11 +7,15 @@ using UnityEngine.UI;
 
 public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
+    public GameObject FlowerPrefab;
     public Image thisImage;
     private Vector3 startPosition;
     public Drop dropArea;
     private PinchToZoomAndShrink Pinch;
-    public FlowerButton flowerButton;
+    public GameObject canvas;
+    [HideInInspector]
+    public bool newSpawn;
+    //public FlowerButton flowerButton;
     bool correct;
     bool dropped;
 
@@ -29,8 +33,19 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
             drop.DestroyOld();
             this.gameObject.transform.SetParent(other.transform);
             transform.position = other.transform.position;
-            startPosition = other.transform.position;
-            flowerButton.resetButton();
+            FailTryAgain prefab = FlowerPrefab.GetComponent<FailTryAgain>();
+            if (!newSpawn)
+            {
+                FailTryAgain newFlower = Instantiate(prefab, startPosition, this.transform.rotation, canvas.transform);
+                newFlower.transform.localScale = new Vector3(Pinch.scrollRect.content.localScale.x / 3, Pinch.scrollRect.content.localScale.x / 3, Pinch.scrollRect.content.localScale.x / 3);
+                newFlower.FlowerPrefab = FlowerPrefab;
+                newFlower.dropArea = dropArea;
+                newFlower.canvas = canvas;
+                newSpawn = true;
+            }
+
+            //newFlower.flowerButton = GetComponent<FlowerButton>();
+            //flowerButton.resetButton();
             dropped = true;
         }
         if (other.gameObject.GetComponent<Drop>() == dropArea)
@@ -40,14 +55,11 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     }
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.GetComponent<Drop>() == dropArea)
-        {
-            correct = false;
-        }
+        dropped = false;
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        thisImage.raycastTarget = false;
+        //thisImage.raycastTarget = false;
         Pinch.isDragging = true;
     }
     public void OnDrag(PointerEventData eventData)
@@ -57,9 +69,14 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     public void OnEndDrag(PointerEventData eventData)
     {
         Pinch.isDragging = false;
-        if (!correct)
+        if (!dropped)
         {
             transform.position = startPosition;
+        }
+        if (newSpawn&&!dropped)
+        {
+            newSpawn = false;
+            GameObject.Destroy(gameObject);
         }
     }
 
