@@ -23,9 +23,4 @@ public class ItemSlot : MonoBehaviour
         Description.text = item.itemDescription;
         Image.sprite = item.itemImage;
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

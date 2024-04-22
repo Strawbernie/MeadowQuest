@@ -15,11 +15,6 @@ MonoBehaviour:
   itemName: Large Skipper
   itemDescription: An Orange Butterfly with dark lines.
   itemImage: {fileID: 21300000, guid: 088354ca56c664040a1d42c0f75e2dda, type: 3}
-  types: 0
-  colors: 0
-  colors1: 6
-  colors2: 0
-  seasons: 0
-  seasons1: 0
-  seasons2: 1
-  seasons3: 1
+  types: 1
+  colors: 65
+  seasons: 3

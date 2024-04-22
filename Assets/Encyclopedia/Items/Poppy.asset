@@ -15,11 +15,6 @@ MonoBehaviour:
   itemName: Poppy
   itemDescription: The poppy is known for its bright colors.
   itemImage: {fileID: 21300000, guid: 542afd6725ef8ec4aa7707e49fde841d, type: 3}
-  types: 2
-  colors: 1
-  colors1: 1
-  colors2: 0
-  seasons: 0
-  seasons1: 1
-  seasons2: 1
-  seasons3: 0
+  types: 4
+  colors: 3
+  seasons: 3

@@ -16,11 +16,6 @@ MonoBehaviour:
   itemDescription: The evening primrose has colors ranging from yellow to pink and
     purple.
   itemImage: {fileID: 21300000, guid: 8a78d465479664b4ba5e0ff60804e4b0, type: 3}
-  types: 2
-  colors: 5
-  colors1: 9
-  colors2: 4
-  seasons: 0
-  seasons1: 1
-  seasons2: 2
-  seasons3: 0
+  types: 4
+  colors: 560
+  seasons: 7

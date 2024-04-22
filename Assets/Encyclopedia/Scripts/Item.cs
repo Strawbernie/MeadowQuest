@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,22 +9,20 @@ public class Item : ScriptableObject
     public string itemName;
     public string itemDescription;
     public Sprite itemImage;
-    public enum Type {Butterfly, Bee, Flower}
-    public enum Color { Orange, Red, Green, Blue, Purple, Yellow, Brown, Black, White, Pink }
-    public enum Season { Spring, Summer, Autumn, Winter}
 
+    [Flags]
+    public enum Type { None = 0, Butterfly = 1, Bee = 2, Flower = 4 }
+    [Flags]
+    public enum Color { None = 0, Orange = 1, Red = 2, Green = 4, Blue = 8, Purple = 16, Yellow = 32, Brown = 64, Black = 128, White = 256, Pink = 512 }
+    [Flags]
+    public enum Season { None = 0, Spring = 1, Summer = 2, Autumn = 4, Winter = 8 }
+
+    [Header("What is it?")]
     public Type types;
     [Header("Colors")]
     public Color colors;
-    [Header("If there are multiple relevant colors, pick those colors too")]
-    public Color colors1;
-    public Color colors2;
-
     [Header("Seasons")]
     public Season seasons;
-    [Header("If there are multiple seasons, pick those seasons too")]
-    public Season seasons1;
-    public Season seasons2;
-    public Season seasons3;
+
 
 }

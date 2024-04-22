@@ -128,7 +128,7 @@ public class EncyclopediaManager : MonoBehaviour
         ItemSlot[] slots = FindObjectsOfType<ItemSlot>();
         foreach (ItemSlot slot in slots)
         {
-            if (slot.item.colors == Item.Color.Orange || slot.item.colors1 == Item.Color.Orange || slot.item.colors2 == Item.Color.Orange)
+            if ((slot.item.colors & Item.Color.Orange)!=0)
             {
                 slot.gameObject.SetActive(true);
             }
@@ -144,7 +144,7 @@ public class EncyclopediaManager : MonoBehaviour
         ItemSlot[] slots = FindObjectsOfType<ItemSlot>();
         foreach (ItemSlot slot in slots)
         {
-            if (slot.item.colors == Item.Color.Purple || slot.item.colors1 == Item.Color.Purple || slot.item.colors2 == Item.Color.Purple)
+            if ((slot.item.colors & Item.Color.Purple) != 0)
             {
                 slot.gameObject.SetActive(true);
             }
@@ -160,7 +160,7 @@ public class EncyclopediaManager : MonoBehaviour
         ItemSlot[] slots = FindObjectsOfType<ItemSlot>();
         foreach (ItemSlot slot in slots)
         {
-            if (slot.item.colors == Item.Color.Black || slot.item.colors1 == Item.Color.Black || slot.item.colors2 == Item.Color.Black)
+            if ((slot.item.colors & Item.Color.Black) != 0)
             {
                 slot.gameObject.SetActive(true);
             }
@@ -176,7 +176,7 @@ public class EncyclopediaManager : MonoBehaviour
         ItemSlot[] slots = FindObjectsOfType<ItemSlot>();
         foreach (ItemSlot slot in slots)
         {
-            if (slot.item.colors == Item.Color.White || slot.item.colors1 == Item.Color.White || slot.item.colors2 == Item.Color.White)
+            if ((slot.item.colors & Item.Color.White) != 0)
             {
                 slot.gameObject.SetActive(true);
             }
@@ -192,7 +192,7 @@ public class EncyclopediaManager : MonoBehaviour
         ItemSlot[] slots = FindObjectsOfType<ItemSlot>();
         foreach (ItemSlot slot in slots)
         {
-            if (slot.item.colors == Item.Color.Yellow || slot.item.colors1 == Item.Color.Yellow || slot.item.colors2 == Item.Color.Yellow)
+            if ((slot.item.colors & Item.Color.Yellow) != 0)
             {
                 slot.gameObject.SetActive(true);
             }
@@ -208,7 +208,7 @@ public class EncyclopediaManager : MonoBehaviour
         ItemSlot[] slots = FindObjectsOfType<ItemSlot>();
         foreach (ItemSlot slot in slots)
         {
-            if (slot.item.colors == Item.Color.Red || slot.item.colors1 == Item.Color.Red || slot.item.colors2 == Item.Color.Red)
+            if ((slot.item.colors & Item.Color.Red) != 0)
             {
                 slot.gameObject.SetActive(true);
             }
@@ -224,7 +224,7 @@ public class EncyclopediaManager : MonoBehaviour
         ItemSlot[] slots = FindObjectsOfType<ItemSlot>();
         foreach (ItemSlot slot in slots)
         {
-            if (slot.item.colors == Item.Color.Green || slot.item.colors1 == Item.Color.Green || slot.item.colors2 == Item.Color.Green)
+            if ((slot.item.colors & Item.Color.Green) != 0)
             {
                 slot.gameObject.SetActive(true);
             }
@@ -240,7 +240,7 @@ public class EncyclopediaManager : MonoBehaviour
         ItemSlot[] slots = FindObjectsOfType<ItemSlot>();
         foreach (ItemSlot slot in slots)
         {
-            if (slot.item.colors == Item.Color.Blue || slot.item.colors1 == Item.Color.Blue || slot.item.colors2 == Item.Color.Blue)
+            if ((slot.item.colors & Item.Color.Blue) != 0)
             {
                 slot.gameObject.SetActive(true);
             }
@@ -256,7 +256,7 @@ public class EncyclopediaManager : MonoBehaviour
         ItemSlot[] slots = FindObjectsOfType<ItemSlot>();
         foreach (ItemSlot slot in slots)
         {
-            if (slot.item.colors == Item.Color.Brown || slot.item.colors1 == Item.Color.Brown || slot.item.colors2 == Item.Color.Brown)
+            if ((slot.item.colors & Item.Color.Brown) != 0)
             {
                 slot.gameObject.SetActive(true);
             }
@@ -272,7 +272,7 @@ public class EncyclopediaManager : MonoBehaviour
         ItemSlot[] slots = FindObjectsOfType<ItemSlot>();
         foreach (ItemSlot slot in slots)
         {
-            if (slot.item.colors == Item.Color.Pink || slot.item.colors1 == Item.Color.Pink || slot.item.colors2 == Item.Color.Pink)
+            if ((slot.item.colors & Item.Color.Pink) != 0)
             {
                 slot.gameObject.SetActive(true);
             }
@@ -301,8 +301,8 @@ public class EncyclopediaManager : MonoBehaviour
         ItemSlot[] slots = FindObjectsOfType<ItemSlot>();
         foreach (ItemSlot slot in slots)
         {
-            if (slot.item.seasons == Item.Season.Spring||slot.item.seasons1 == Item.Season.Spring|| slot.item.seasons2 == Item.Season.Spring || slot.item.seasons3 == Item.Season.Spring)
-            {
+            if ((slot.item.seasons & Item.Season.Spring) != 0)
+                {
                 slot.gameObject.SetActive(true);
             }
             else
@@ -317,7 +317,7 @@ public class EncyclopediaManager : MonoBehaviour
         ItemSlot[] slots = FindObjectsOfType<ItemSlot>();
         foreach (ItemSlot slot in slots)
         {
-            if (slot.item.seasons == Item.Season.Summer || slot.item.seasons1 == Item.Season.Summer || slot.item.seasons2 == Item.Season.Summer || slot.item.seasons3 == Item.Season.Summer)
+            if ((slot.item.seasons & Item.Season.Summer) != 0)
             {
                 slot.gameObject.SetActive(true);
             }
@@ -333,7 +333,7 @@ public class EncyclopediaManager : MonoBehaviour
         ItemSlot[] slots = FindObjectsOfType<ItemSlot>();
         foreach (ItemSlot slot in slots)
         {
-            if (slot.item.seasons == Item.Season.Autumn || slot.item.seasons1 == Item.Season.Autumn || slot.item.seasons2 == Item.Season.Autumn || slot.item.seasons3 == Item.Season.Autumn)
+            if ((slot.item.seasons & Item.Season.Autumn) != 0)
             {
                 slot.gameObject.SetActive(true);
             }
@@ -349,7 +349,7 @@ public class EncyclopediaManager : MonoBehaviour
         ItemSlot[] slots = FindObjectsOfType<ItemSlot>();
         foreach (ItemSlot slot in slots)
         {
-            if (slot.item.seasons == Item.Season.Winter || slot.item.seasons1 == Item.Season.Winter || slot.item.seasons2 == Item.Season.Winter || slot.item.seasons3 == Item.Season.Winter)
+            if ((slot.item.seasons & Item.Season.Winter) != 0)
             {
                 slot.gameObject.SetActive(true);
             }

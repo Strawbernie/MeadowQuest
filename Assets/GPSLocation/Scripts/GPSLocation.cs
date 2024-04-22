@@ -24,7 +24,6 @@ public class GPSLocation : MonoBehaviour
         Permission.RequestUserPermission(Permission.FineLocation);
     }
 
-    
     private void Awake()
     {
         //Set up and enable the gyroscope (check your device has one)
@@ -81,20 +80,11 @@ public class GPSLocation : MonoBehaviour
     {
         if (Input.location.status == LocationServiceStatus.Running)
         {
-            //Access to GPS values granted and initialized
-            //Visually represent data
-            //Get player location
             Location = new SerializableLatLng(Input.location.lastData.latitude, Input.location.lastData.longitude);
-            //Calculate player location to scene position
             player.localPosition = LMV.LatLngToScene(Location);
             player.localPosition = new Vector3(player.localPosition.x, 50, player.localPosition.z);
-            //Get player phone rotation
             phoneRotation = Input.gyro.attitude;
             player.localRotation = new Quaternion(0, -phoneRotation.z, 0, phoneRotation.w);
-        }
-        else
-        {
-            // Service stopped
         }
     }
 }
