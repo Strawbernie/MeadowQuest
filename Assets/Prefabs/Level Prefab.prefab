@@ -199,8 +199,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 100412326349818643}
-        m_TargetAssemblyTypeName: LevelButtonsScript, Assembly-CSharp
-        m_MethodName: OnLevelButtonClicked
+        m_TargetAssemblyTypeName: LevelTransition, Assembly-CSharp
+        m_MethodName: OnButtonClickedGoToNextScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -219,10 +219,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1790415217686894216}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00c8380bb3ce23343a359b3b42bd19ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 796f915d45076f34e85da1ab81c609bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: LinkInsects
+  screenOrSceneName: 
+  finalName: 
 --- !u!1 &5082242803239832820
 GameObject:
   m_ObjectHideFlags: 0
