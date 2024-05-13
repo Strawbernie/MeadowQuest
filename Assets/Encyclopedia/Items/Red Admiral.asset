@@ -15,6 +15,7 @@ MonoBehaviour:
   itemName: Red Admiral
   itemDescription: The Red Admiral has black wings with red bands.
   itemImage: {fileID: 21300000, guid: d0e5d16192f6419448a60af6273f3959, type: 3}
+  blackoutImage: {fileID: 21300000, guid: b8057902dcb330c4e8655b48b9ecf3fb, type: 3}
   types: 1
   colors: 131
   seasons: 7

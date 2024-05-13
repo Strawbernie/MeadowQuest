@@ -9,6 +9,7 @@ public class Item : ScriptableObject
     public string itemName;
     public string itemDescription;
     public Sprite itemImage;
+    public Sprite blackoutImage;
 
     [Flags]
     public enum Type { None = 0, Butterfly = 1, Bee = 2, Flower = 4 }

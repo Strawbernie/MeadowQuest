@@ -12,8 +12,39 @@ public class EncyclopediaManager : MonoBehaviour
     public GameObject LooksLikePopUp;
     public GameObject SeasonPopUp;
     public GameObject ColorPopUp;
+    public ItemSlot[] butterflyLevel1Unlocks;
+    public ItemSlot[] butterflyLevel2Unlocks;
+    public ItemSlot[] flowerLevel1Unlocks;
     bool filterOn;
 
+    private void Update()
+    {
+        if (LevelsUnlocked.Butterfly1Unlocked)
+        {
+            Debug.Log("hrello");
+            foreach (ItemSlot itemSlot in butterflyLevel1Unlocks)
+            {
+                itemSlot.unlockedItem = true;
+                itemSlot.UpdateInfo();
+            }
+        }
+        if (LevelsUnlocked.Butterfly2Unlocked)
+        {
+            foreach (ItemSlot itemSlot in butterflyLevel2Unlocks)
+            {
+                itemSlot.unlockedItem = true;
+                itemSlot.UpdateInfo();
+            }
+        }
+        if (LevelsUnlocked.Flower1Unlocked)
+        {
+            foreach (ItemSlot itemSlot in flowerLevel1Unlocks)
+            {
+                itemSlot.unlockedItem = true;
+                itemSlot.UpdateInfo();
+            }
+        }
+    }
     public void ResetButton()
     {
         List<ItemSlot> slots = new List<ItemSlot>();

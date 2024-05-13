@@ -8,6 +8,7 @@ public class Translator : MonoBehaviour
     TextMeshProUGUI textToTranslate;
     public string DutchText;
     public string EnglishText;
+    [HideInInspector] public bool shouldntTranslate;
     void Start()
     {
         textToTranslate = GetComponent<TextMeshProUGUI>();
@@ -22,14 +23,17 @@ public class Translator : MonoBehaviour
 
     public void OnValueChanged()
     {
-        textToTranslate = GetComponent<TextMeshProUGUI>();
-        if (LanguageManager.isDutch)
+        if (!shouldntTranslate)
         {
-            textToTranslate.text = DutchText;
-        }
-        else
-        {
-            textToTranslate.text = EnglishText;
+            textToTranslate = GetComponent<TextMeshProUGUI>();
+            if (LanguageManager.isDutch)
+            {
+                textToTranslate.text = DutchText;
+            }
+            else
+            {
+                textToTranslate.text = EnglishText;
+            }
         }
     }
 }

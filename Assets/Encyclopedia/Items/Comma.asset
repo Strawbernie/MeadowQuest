@@ -15,6 +15,7 @@ MonoBehaviour:
   itemName: Comma
   itemDescription: An Orange Butterfly with black spots.
   itemImage: {fileID: 21300000, guid: fe1340f08a267fd44a12e4b3606512b5, type: 3}
+  blackoutImage: {fileID: 21300000, guid: 485bd83a76a990c45b15793c46ccb0ef, type: 3}
   types: 1
   colors: 131
   seasons: -1

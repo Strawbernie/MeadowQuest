@@ -16,6 +16,7 @@ MonoBehaviour:
   itemDescription: The Wild Pansy appears in various combinations of cream, yellow
     and purple.
   itemImage: {fileID: 21300000, guid: 99d39689c8f8885439413e8eb48c4d57, type: 3}
+  blackoutImage: {fileID: 21300000, guid: b7d2c6514a8f65743b742f7521cf78ca, type: 3}
   types: 4
   colors: 304
   seasons: 7

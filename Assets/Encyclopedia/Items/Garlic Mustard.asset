@@ -16,6 +16,7 @@ MonoBehaviour:
   itemDescription: The rosettes of the Garlic Mustard are green through the winter
     and bloom the following spring.
   itemImage: {fileID: 21300000, guid: 44dd6424befe9c64bb7133b4969345d0, type: 3}
+  blackoutImage: {fileID: 21300000, guid: 061a8dc107414e04aa53095552b3f016, type: 3}
   types: 4
   colors: 292
   seasons: -1

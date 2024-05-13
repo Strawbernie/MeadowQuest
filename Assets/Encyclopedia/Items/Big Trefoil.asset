@@ -15,6 +15,7 @@ MonoBehaviour:
   itemName: Big Trefoil
   itemDescription: The Big Trefoil is a yellow flower that can grow up to 80 centimeters.
   itemImage: {fileID: 21300000, guid: 5a05d0b517ce970449103fbfa65701ed, type: 3}
+  blackoutImage: {fileID: 21300000, guid: 2fc5634c81b99a145a39e0d341359f6a, type: 3}
   types: 4
   colors: 36
   seasons: 3

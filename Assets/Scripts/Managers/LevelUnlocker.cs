@@ -28,6 +28,10 @@ public class LevelUnlocker : MonoBehaviour
             levels[i].SetActive(false);
             levelsUnlockedButterfly = 1;
         }
+        if (LevelsUnlocked.Butterfly1Unlocked)
+        {
+            levelsUnlockedButterfly++;
+        }
         if (LevelsUnlocked.Butterfly2Unlocked)
         {
             levelsUnlockedButterfly++;
@@ -42,6 +46,10 @@ public class LevelUnlocker : MonoBehaviour
         for (int i = 0; i < levels.Length; i++)
         {
             levels[i].SetActive(false);
+        }
+        if (LevelsUnlocked.Flower1Unlocked)
+        {
+            levelsUnlockedFlower++;
         }
         for (int i = 0; i < Mathf.Min(levels.Length, levelsUnlockedFlower); i++)
         {

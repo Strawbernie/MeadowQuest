@@ -15,6 +15,7 @@ MonoBehaviour:
   itemName: Mining Bee
   itemDescription: Female mining bees dig tunnels which they lay their eggs in.
   itemImage: {fileID: 21300000, guid: 3fb9b87e020b7f24ca53ed2a9e9bca25, type: 3}
+  blackoutImage: {fileID: 21300000, guid: 9515a5178b5d6d3488fe21a3c7b903af, type: 3}
   types: 2
   colors: 161
   seasons: -1
