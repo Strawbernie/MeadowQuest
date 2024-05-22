@@ -80,7 +80,7 @@ namespace AirFishLab.ScrollingList
         [SerializeField]
         [Tooltip("The objects that are used for displaying the content. " +
                  "They should be derived from the class ListBox")]
-        private List<ListBox> _listBoxes;
+        public List<ListBox> _listBoxes;
         [SerializeField]
         [FormerlySerializedAs("_setting")]
         [Tooltip("The setting of this list")]
@@ -564,8 +564,8 @@ namespace AirFishLab.ScrollingList
         /// </summary>
         public void GenerateBoxesAndArrange()
         {
-            if (Application.isPlaying)
-                return;
+           // if (Application.isPlaying)
+                //return;
 
             GetComponentReference();
             SetListBoxes();
