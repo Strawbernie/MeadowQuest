@@ -5,9 +5,8 @@ using UnityEngine.EventSystems;
 
 public class Drop : MonoBehaviour, IDropHandler
 {
-    [SerializeField]
-    string CorrectName;
-    public bool IsCorrect = false;
+    public string CorrectName;
+    public bool IsCorrect;
     FailTryAgain newDraggable;
     FailTryAgain oldDraggable;
     public void OnDrop(PointerEventData eventData)
@@ -19,20 +18,19 @@ public class Drop : MonoBehaviour, IDropHandler
             {
                 newDraggable = draggable;
                 //draggable.startPosition = transform.position;
-                if (draggable.name == CorrectName)
-                {
-                    IsCorrect = true;
-                }
             }
         }
     }
     public void DestroyOld()
     {
         oldDraggable = newDraggable;
+        foreach (Transform child in gameObject.transform)
+        {
+            Destroy(child.gameObject);
+        }
         if (oldDraggable != null)
         {
             oldDraggable.newSpawn = false;
-            Destroy(oldDraggable.gameObject);
         }
     }
     public void ResetIsCorrect()

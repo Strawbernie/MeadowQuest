@@ -16,6 +16,7 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     private PinchToZoomAndShrink Pinch;
     public CircularScrollingList cList;
     public GameObject canvas;
+    public string correctSection;
     [HideInInspector]
     public bool newSpawn;
     //public FlowerButton flowerButton;
@@ -35,6 +36,14 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
             transform.position = startPosition;
             FailTryAgain prefab = FlowerPrefab.GetComponent<FailTryAgain>();
             Drop drop = other.transform.gameObject.GetComponent<Drop>();
+            if (drop.CorrectName == correctSection)
+            {
+                drop.IsCorrect = true;
+            }
+            else
+            {
+                drop.IsCorrect = false;
+            }
             drop.DestroyOld();
             if (!newSpawn)
             {
@@ -52,10 +61,6 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
             //newFlower.flowerButton = GetComponent<FlowerButton>();
             //flowerButton.resetButton();
             dropped = true;
-        }
-        if (other.gameObject.GetComponent<Drop>() == dropArea)
-        {
-            correct = true;
         }
     }
     void OnTriggerExit(Collider other)
