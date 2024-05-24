@@ -10017,12 +10017,12 @@ PrefabInstance:
     - target: {fileID: 7207972802228013369, guid: fdf6e457f452ec14c950438312d996db,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 350
+      value: 420
       objectReference: {fileID: 0}
     - target: {fileID: 7207972802228013369, guid: fdf6e457f452ec14c950438312d996db,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 350
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: 7207972802228013369, guid: fdf6e457f452ec14c950438312d996db,
         type: 3}
@@ -24051,12 +24051,12 @@ PrefabInstance:
     - target: {fileID: 7207972802228013369, guid: fdf6e457f452ec14c950438312d996db,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 350
+      value: 420
       objectReference: {fileID: 0}
     - target: {fileID: 7207972802228013369, guid: fdf6e457f452ec14c950438312d996db,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 350
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: 7207972802228013369, guid: fdf6e457f452ec14c950438312d996db,
         type: 3}
@@ -44149,12 +44149,12 @@ PrefabInstance:
     - target: {fileID: 7207972802228013369, guid: c75afef5a95ff4a48a69b57d1e713823,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 350
+      value: 525
       objectReference: {fileID: 0}
     - target: {fileID: 7207972802228013369, guid: c75afef5a95ff4a48a69b57d1e713823,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 350
+      value: 525
       objectReference: {fileID: 0}
     - target: {fileID: 7207972802228013369, guid: c75afef5a95ff4a48a69b57d1e713823,
         type: 3}
@@ -69062,12 +69062,12 @@ PrefabInstance:
     - target: {fileID: 7207972802228013369, guid: c75afef5a95ff4a48a69b57d1e713823,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 350
+      value: 525
       objectReference: {fileID: 0}
     - target: {fileID: 7207972802228013369, guid: c75afef5a95ff4a48a69b57d1e713823,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 350
+      value: 525
       objectReference: {fileID: 0}
     - target: {fileID: 7207972802228013369, guid: c75afef5a95ff4a48a69b57d1e713823,
         type: 3}
@@ -78712,12 +78712,22 @@ PrefabInstance:
     - target: {fileID: 37144177077296892, guid: 978113fea2dd6844e8a7420bcbb3c973,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 350
+      value: 525
       objectReference: {fileID: 0}
     - target: {fileID: 37144177077296892, guid: 978113fea2dd6844e8a7420bcbb3c973,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 350
+      value: 525
+      objectReference: {fileID: 0}
+    - target: {fileID: 37144177077296892, guid: 978113fea2dd6844e8a7420bcbb3c973,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 37144177077296892, guid: 978113fea2dd6844e8a7420bcbb3c973,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 37144177077296892, guid: 978113fea2dd6844e8a7420bcbb3c973,
         type: 3}
@@ -78926,12 +78936,22 @@ PrefabInstance:
     - target: {fileID: 7131792204833006468, guid: d5b6ef04935e5be49ab900e688482255,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 350
+      value: 525
       objectReference: {fileID: 0}
     - target: {fileID: 7131792204833006468, guid: d5b6ef04935e5be49ab900e688482255,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 350
+      value: 525
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131792204833006468, guid: d5b6ef04935e5be49ab900e688482255,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131792204833006468, guid: d5b6ef04935e5be49ab900e688482255,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7131792204833006468, guid: d5b6ef04935e5be49ab900e688482255,
         type: 3}

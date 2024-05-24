@@ -15,13 +15,13 @@ public class EncyclopediaManager : MonoBehaviour
     public ItemSlot[] butterflyLevel1Unlocks;
     public ItemSlot[] butterflyLevel2Unlocks;
     public ItemSlot[] flowerLevel1Unlocks;
+    public ItemSlot[] flowerLevel2Unlocks;
     bool filterOn;
 
     private void Update()
     {
         if (LevelsUnlocked.Butterfly1Unlocked)
         {
-            Debug.Log("hrello");
             foreach (ItemSlot itemSlot in butterflyLevel1Unlocks)
             {
                 itemSlot.unlockedItem = true;
@@ -39,6 +39,14 @@ public class EncyclopediaManager : MonoBehaviour
         if (LevelsUnlocked.Flower1Unlocked)
         {
             foreach (ItemSlot itemSlot in flowerLevel1Unlocks)
+            {
+                itemSlot.unlockedItem = true;
+                itemSlot.UpdateInfo();
+            }
+        }
+        if (LevelsUnlocked.Flower2Unlocked)
+        {
+            foreach (ItemSlot itemSlot in flowerLevel2Unlocks)
             {
                 itemSlot.unlockedItem = true;
                 itemSlot.UpdateInfo();

@@ -8,4 +8,5 @@ public static class LevelsUnlocked
     public static bool Butterfly1Unlocked;
     public static bool Butterfly2Unlocked;
     public static bool Flower1Unlocked;
+    public static bool Flower2Unlocked;
 }

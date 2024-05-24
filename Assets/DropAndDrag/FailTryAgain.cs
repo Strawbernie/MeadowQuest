@@ -22,9 +22,11 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     //public FlowerButton flowerButton;
     bool correct;
     bool dropped;
+    FlowerGameManager gameManager;
 
     void Start()
     {
+        gameManager = FindObjectOfType<FlowerGameManager>();
         Pinch = FindObjectOfType<PinchToZoomAndShrink>();
         //thisImage = GetComponent<Image>();
         startPosition = transform.position;
@@ -39,6 +41,7 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
             if (drop.CorrectName == correctSection)
             {
                 drop.IsCorrect = true;
+                gameManager.checkWin();
             }
             else
             {

@@ -9,6 +9,7 @@ public class Drop : MonoBehaviour, IDropHandler
     public bool IsCorrect;
     FailTryAgain newDraggable;
     FailTryAgain oldDraggable;
+
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag != null && eventData.pointerDrag.CompareTag("DragOBJ"))
