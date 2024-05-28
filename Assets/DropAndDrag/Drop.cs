@@ -12,15 +12,7 @@ public class Drop : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (eventData.pointerDrag != null && eventData.pointerDrag.CompareTag("DragOBJ"))
-        {
-            FailTryAgain draggable = eventData.pointerDrag.GetComponent<FailTryAgain>();
-            if (draggable != null)
-            {
-                newDraggable = draggable;
-                //draggable.startPosition = transform.position;
-            }
-        }
+                //Debug.Log("balls");
     }
     public void DestroyOld()
     {

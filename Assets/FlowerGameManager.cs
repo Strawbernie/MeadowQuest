@@ -8,11 +8,19 @@ public class FlowerGameManager : MonoBehaviour
     public Drop dropSection2;
     public Drop dropSection3;
     public GameObject winCanvas;
+    public FailTryAgain[] listElements;
     public void checkWin()
     {
         if (dropSection1.IsCorrect &&  dropSection2.IsCorrect && dropSection3.IsCorrect)
         {
             winCanvas.SetActive(true);
+        }
+    }
+    public void ResetPositions()
+    {
+        foreach (var element in listElements)
+        {
+            element.gameObject.transform.position = element.startPosition;
         }
     }
 }

@@ -259,7 +259,7 @@ namespace AirFishLab.ScrollingList
         /// <summary>
         /// Set the list boxes to be used by the list
         /// </summary>
-        private void SetListBoxes()
+        public void SetListBoxes()
         {
             var prefab = _boxSetting.BoxPrefab;
             var rootTransform = _boxSetting.BoxRootTransform;

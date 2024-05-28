@@ -48,8 +48,8 @@ public class SectionButtons : MonoBehaviour
                 {
                     LevelTransition button = levelImages[i].gameObject.GetComponent<LevelTransition>();
                     button.finalName = button.screenOrSceneName + "Flower";
-                    levelUnlocker.UnlockedFlower();
                 }
+                levelUnlocker.UnlockedFlower();
                 break;
             case "Butterflies Button":
                 newLevelColor = orangeColor;
@@ -57,8 +57,8 @@ public class SectionButtons : MonoBehaviour
                 {
                     LevelTransition button = levelImages[i].gameObject.GetComponent<LevelTransition>();
                     button.finalName = button.screenOrSceneName + "Butterfly";
-                    levelUnlocker.UnlockedButterfly();
                 }
+                levelUnlocker.UnlockedButterfly();
                 break;
             case "Bees Button":
                 newLevelColor = yellowColor;

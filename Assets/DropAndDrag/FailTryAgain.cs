@@ -11,7 +11,7 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
 {
     public GameObject FlowerPrefab;
     //public Image thisImage;
-    private Vector3 startPosition;
+    [HideInInspector] public Vector3 startPosition;
     public Drop dropArea;
     private PinchToZoomAndShrink Pinch;
     public CircularScrollingList cList;
@@ -36,7 +36,7 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
         if (other.gameObject.tag == "DropArea"&& this.gameObject.tag == "DragOBJ")
         {
             transform.position = startPosition;
-            FailTryAgain prefab = FlowerPrefab.GetComponent<FailTryAgain>();
+            GameObject prefab = FlowerPrefab;
             Drop drop = other.transform.gameObject.GetComponent<Drop>();
             if (drop.CorrectName == correctSection)
             {
@@ -48,28 +48,20 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
                 drop.IsCorrect = false;
             }
             drop.DestroyOld();
-            if (!newSpawn)
-            {
-                FailTryAgain newFlower = Instantiate(prefab, startPosition, this.transform.rotation, canvas.transform);
+                GameObject newFlower = Instantiate(prefab, other.transform.position, this.transform.rotation, other.transform);
                 newFlower.transform.localScale = new Vector3(Pinch.scrollRect.content.localScale.x / 3, Pinch.scrollRect.content.localScale.x / 3, Pinch.scrollRect.content.localScale.x / 3);
-                newFlower.transform.position = other.transform.position;
-                newFlower.gameObject.transform.SetParent(other.transform);
-                newFlower.FlowerPrefab = FlowerPrefab;
-                newFlower.dropArea = dropArea;
-                newFlower.canvas = canvas;
-                newFlower.cList = cList;
-                newSpawn = true;
+               // newFlower.transform.position = other.transform.position;
+               // newFlower.gameObject.transform.SetParent(other.transform);
             }
-            cList.GenerateBoxesAndArrange();
+            gameManager.ResetPositions();
             //newFlower.flowerButton = GetComponent<FlowerButton>();
             //flowerButton.resetButton();
             dropped = true;
-        }
     }
     void OnTriggerExit(Collider other)
     {
         dropped = false;
-        cList.GenerateBoxesAndArrange();
+        gameManager.ResetPositions();
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -86,7 +78,7 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
         if (!dropped)
         {
             transform.position = startPosition;
-            cList.GenerateBoxesAndArrange();
+            gameManager.ResetPositions();
         }
         if (newSpawn&&!dropped)
         {
