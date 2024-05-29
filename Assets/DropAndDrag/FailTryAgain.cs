@@ -49,7 +49,7 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
             }
             drop.DestroyOld();
                 GameObject newFlower = Instantiate(prefab, other.transform.position, this.transform.rotation, other.transform);
-                newFlower.transform.localScale = new Vector3(Pinch.scrollRect.content.localScale.x / 3, Pinch.scrollRect.content.localScale.x / 3, Pinch.scrollRect.content.localScale.x / 3);
+                //newFlower.transform.localScale = new Vector3(Pinch.scrollRect.content.localScale.x / 3, Pinch.scrollRect.content.localScale.x / 3, Pinch.scrollRect.content.localScale.x / 3);
                // newFlower.transform.position = other.transform.position;
                // newFlower.gameObject.transform.SetParent(other.transform);
             }
