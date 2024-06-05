@@ -14,7 +14,6 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     [HideInInspector] public Vector3 startPosition;
     public Drop dropArea;
     private PinchToZoomAndShrink Pinch;
-    public CircularScrollingList cList;
     public GameObject canvas;
     public string correctSection;
     [HideInInspector]
@@ -61,7 +60,7 @@ public class FailTryAgain : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     void OnTriggerExit(Collider other)
     {
         dropped = false;
-        gameManager.ResetPositions();
+       gameManager.ResetPositions();
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
