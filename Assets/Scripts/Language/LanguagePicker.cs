@@ -6,6 +6,7 @@ public class LanguagePicker : MonoBehaviour
 {
     public GameObject canvas;
     public GameObject mainScreen;
+    Translator[] translations;
     private void Awake()
     {
         ItemSlot[] itemSlots = Resources.FindObjectsOfTypeAll(typeof(ItemSlot)) as ItemSlot[];
@@ -13,11 +14,12 @@ public class LanguagePicker : MonoBehaviour
         {
             itemSlot.GatherInfo();
         }
+        translations = Resources.FindObjectsOfTypeAll(typeof(Translator)) as Translator[];
     }
     public void pickedDutch()
     {
         LanguageManager.isDutch = true;
-        Translator[] translations = Resources.FindObjectsOfTypeAll(typeof(Translator)) as Translator[];
+       
         foreach (Translator translator in translations)
         {
             translator.OnValueChanged();
@@ -28,7 +30,7 @@ public class LanguagePicker : MonoBehaviour
     public void pickedEnglish()
     {
         LanguageManager.isDutch = false;
-        Translator[] translations = Resources.FindObjectsOfTypeAll(typeof(Translator)) as Translator[];
+        
         foreach (Translator translator in translations)
         {
             translator.OnValueChanged();

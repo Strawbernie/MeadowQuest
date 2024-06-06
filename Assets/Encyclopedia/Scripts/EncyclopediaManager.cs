@@ -15,16 +15,22 @@ public class EncyclopediaManager : MonoBehaviour
     public ItemSlot[] butterflyLevel1Unlocks;
     public ItemSlot[] butterflyLevel2Unlocks;
     public ItemSlot[] flowerLevel1Unlocks;
+    public ItemSlot[] flowerLevel2Unlocks;
+    public AchievementSlot firstLevel;
+    public AchievementSlot allButterflies;
+    public AchievementSlot allFlowers;
+    public AchievementSlot allLevels;
     bool filterOn;
 
-    private void Update()
+    private void Start()
     {
         if (LevelsUnlocked.Butterfly1Unlocked)
         {
-            Debug.Log("hrello");
             foreach (ItemSlot itemSlot in butterflyLevel1Unlocks)
             {
                 itemSlot.unlockedItem = true;
+                firstLevel.gameObject.SetActive(true);
+                firstLevel.UpdateInfo();
                 itemSlot.UpdateInfo();
             }
         }
@@ -33,6 +39,8 @@ public class EncyclopediaManager : MonoBehaviour
             foreach (ItemSlot itemSlot in butterflyLevel2Unlocks)
             {
                 itemSlot.unlockedItem = true;
+                allButterflies.gameObject.SetActive(true);
+                allButterflies.UpdateInfo();
                 itemSlot.UpdateInfo();
             }
         }
@@ -40,9 +48,26 @@ public class EncyclopediaManager : MonoBehaviour
         {
             foreach (ItemSlot itemSlot in flowerLevel1Unlocks)
             {
+                firstLevel.gameObject.SetActive(true);
+                firstLevel.UpdateInfo();
                 itemSlot.unlockedItem = true;
                 itemSlot.UpdateInfo();
             }
+        }
+        if (LevelsUnlocked.Flower2Unlocked)
+        {
+            foreach (ItemSlot itemSlot in flowerLevel2Unlocks)
+            {
+                allFlowers.gameObject.SetActive(true);
+                allFlowers.UpdateInfo();
+                itemSlot.unlockedItem = true;
+                itemSlot.UpdateInfo();
+            }
+        }
+        if(LevelsUnlocked.Flower2Unlocked && LevelsUnlocked.Butterfly2Unlocked)
+        {
+            allLevels.gameObject.SetActive(true);
+            allLevels.UpdateInfo();
         }
     }
     public void ResetButton()

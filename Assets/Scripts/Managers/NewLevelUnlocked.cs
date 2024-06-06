@@ -18,4 +18,8 @@ public class NewLevelUnlocked : MonoBehaviour
     {
         LevelsUnlocked.Flower1Unlocked = true;
     }
+    public void Flower2Unlocked()
+    {
+        LevelsUnlocked.Flower2Unlocked = true;
+    }
 }

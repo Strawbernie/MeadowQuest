@@ -13,8 +13,7 @@ namespace AirFishLab.ScrollingList.Demo
 
         protected override void UpdateDisplayContent(IListContent listContent)
         {
-            Content = ((IntListContent)listContent).Value;
-            _contentText.text = Content.ToString();
+
         }
     }
 }

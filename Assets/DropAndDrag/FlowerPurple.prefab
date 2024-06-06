@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 2551868228519659565}
   - component: {fileID: -8384017787829907524}
   - component: {fileID: -2713483381662778623}
+  - component: {fileID: -3052230988944882543}
   m_Layer: 5
   m_Name: FlowerPurple
-  m_TagString: DragOBJ
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,9 +92,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FlowerPrefab: {fileID: 0}
-  thisImage: {fileID: 5005598297259102007}
   dropArea: {fileID: 0}
+  cList: {fileID: 0}
   canvas: {fileID: 0}
+  newSpawn: 0
 --- !u!65 &-8384017787829907524
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -142,3 +144,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-3052230988944882543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4555843033985012763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d74fb0bc5cdce554eba6c60a0e789157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

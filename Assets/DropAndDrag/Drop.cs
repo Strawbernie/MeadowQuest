@@ -5,34 +5,25 @@ using UnityEngine.EventSystems;
 
 public class Drop : MonoBehaviour, IDropHandler
 {
-    [SerializeField]
-    string CorrectName;
-    public bool IsCorrect = false;
+    public string CorrectName;
+    public bool IsCorrect;
     FailTryAgain newDraggable;
     FailTryAgain oldDraggable;
+
     public void OnDrop(PointerEventData eventData)
     {
-        if (eventData.pointerDrag != null && eventData.pointerDrag.CompareTag("DragOBJ"))
-        {
-            FailTryAgain draggable = eventData.pointerDrag.GetComponent<FailTryAgain>();
-            if (draggable != null)
-            {
-                newDraggable = draggable;
-                //draggable.startPosition = transform.position;
-                if (draggable.name == CorrectName)
-                {
-                    IsCorrect = true;
-                }
-            }
-        }
+                //Debug.Log("balls");
     }
     public void DestroyOld()
     {
         oldDraggable = newDraggable;
+        foreach (Transform child in gameObject.transform)
+        {
+            Destroy(child.gameObject);
+        }
         if (oldDraggable != null)
         {
             oldDraggable.newSpawn = false;
-            Destroy(oldDraggable.gameObject);
         }
     }
     public void ResetIsCorrect()
