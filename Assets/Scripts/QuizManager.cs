@@ -11,10 +11,19 @@ public class QuizManager : MonoBehaviour
     public int currentQuestion;
 
     public TextMeshProUGUI QuestionTxt;
+    public Slider progressBar;
 
+    private int totalQuestions;
+
+    public GameObject CorrectSign;
+    public GameObject IncorrectSign;
 
     private void Start()
     {
+        totalQuestions = QnA.Count;
+        progressBar.maxValue = totalQuestions; // Set the max value of the progress bar
+        progressBar.value = 0; 
+        
         //generates a question at the start
         generateQuestion();
     } 
@@ -23,6 +32,7 @@ public class QuizManager : MonoBehaviour
     {
         //if the answer is correct then it generates a new question
         QnA.RemoveAt(currentQuestion);
+        progressBar.value++;
         generateQuestion();
     }
 
@@ -30,6 +40,7 @@ public class QuizManager : MonoBehaviour
     {
         //if the answer is incorrect it stays with the current question
         
+        IncorrectSign.SetActive(true);
     }
 
     void SetAnswers()
@@ -62,7 +73,12 @@ public class QuizManager : MonoBehaviour
         QuestionTxt.text = QnA[currentQuestion].Questions;
         SetAnswers();
 
-  
+        foreach (GameObject option in options)
+        {
+            AnswerScript script = option.GetComponent<AnswerScript>();
+            script.correctImage.SetActive(false);
+            script.incorrectImage.SetActive(false);
+        }
     }
 
     [System.Serializable]
