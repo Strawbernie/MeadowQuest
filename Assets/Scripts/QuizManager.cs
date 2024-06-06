@@ -10,7 +10,7 @@ public class QuizManager : MonoBehaviour
     public GameObject[] options;
     public int currentQuestion;
 
-    public TextMeshProUGUI QuestionTxt;
+    public Image QuestionImage; // Change from TextMeshProUGUI to Image
     public Slider progressBar;
 
     private int totalQuestions;
@@ -22,15 +22,15 @@ public class QuizManager : MonoBehaviour
     {
         totalQuestions = QnA.Count;
         progressBar.maxValue = totalQuestions; // Set the max value of the progress bar
-        progressBar.value = 0; 
-        
-        //generates a question at the start
+        progressBar.value = 0;
+
+        // generates a question at the start
         generateQuestion();
-    } 
+    }
 
     public void Correct()
     {
-        //if the answer is correct then it generates a new question
+        // if the answer is correct then it generates a new question
         QnA.RemoveAt(currentQuestion);
         progressBar.value++;
         generateQuestion();
@@ -38,8 +38,8 @@ public class QuizManager : MonoBehaviour
 
     public void Incorrect()
     {
-        //if the answer is incorrect it stays with the current question
-        
+        // if the answer is incorrect it stays with the current question
+
         IncorrectSign.SetActive(true);
     }
 
@@ -52,7 +52,7 @@ public class QuizManager : MonoBehaviour
             return;
         }
 
-       for (int i = 0; i < options.Length; i++)
+        for (int i = 0; i < options.Length; i++)
         {
             options[i].GetComponent<AnswerScript>().isCorrect = false;
             options[i].GetComponent<Image>().sprite = QnA[currentQuestion].Answers[i];
@@ -65,14 +65,18 @@ public class QuizManager : MonoBehaviour
         }
     }
 
-    //how it generates a new question
-    void generateQuestion()
+    // how it generates a new question
+   void generateQuestion()
     {
         currentQuestion = Random.Range(0, QnA.Count);
 
         QuestionTxt.text = QnA[currentQuestion].Questions;
         SetAnswers();
-
+        StartCoroutine(removeDelay());
+    }
+    IEnumerator removeDelay()
+    {
+        yield return new WaitForSeconds(.2f);
         foreach (GameObject option in options)
         {
             AnswerScript script = option.GetComponent<AnswerScript>();
@@ -84,7 +88,7 @@ public class QuizManager : MonoBehaviour
     [System.Serializable]
     public class QuestionsAndAnswers
     {
-        public string Questions;
+        public Sprite QuestionSprite; // Changed from string to Sprite
         public List<Sprite> Answers;
         public int CorrectAnswer;
     }
