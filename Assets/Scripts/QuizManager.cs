@@ -70,7 +70,7 @@ public class QuizManager : MonoBehaviour
     {
         currentQuestion = Random.Range(0, QnA.Count);
 
-        QuestionTxt.text = QnA[currentQuestion].Questions;
+        QuestionImage.sprite = QnA[currentQuestion].QuestionSprite;
         SetAnswers();
         StartCoroutine(removeDelay());
     }
