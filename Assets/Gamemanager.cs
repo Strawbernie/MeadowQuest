@@ -8,6 +8,7 @@ public class Gamemanager : MonoBehaviour
     void Awake()
     {
         Permission.RequestUserPermission(Permission.FineLocation);
+        Application.targetFrameRate = 30;
     }
 
 }
