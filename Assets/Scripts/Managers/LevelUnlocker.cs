@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelUnlocker : MonoBehaviour
 {
@@ -8,9 +9,12 @@ public class LevelUnlocker : MonoBehaviour
     public GameObject mainScreen;
     public GameObject tutorial;
     public GameObject[] levels;
-    public GameObject[] checkmarks;
     int levelsUnlockedButterfly = 1;
     int levelsUnlockedFlower = 1;
+    public Sprite doneSprite;
+    public Sprite unlockedSpriteButterfly;
+    public Sprite unlockedSpriteFlower;
+    public Sprite lockedSprite;
 
     private void Start()
     {
@@ -26,8 +30,10 @@ public class LevelUnlocker : MonoBehaviour
     {
         for (int i = 0; i < levels.Length; i++)
         {
-            levels[i].SetActive(false);
-            checkmarks[i].SetActive(false);
+            Button button = levels[i].GetComponent<Button>();
+            button.enabled = false;
+            Image buttonSprite = button.gameObject.GetComponent<Image>();
+            buttonSprite.sprite = lockedSprite;
             levelsUnlockedButterfly = 1;
         }
         if (LevelsUnlocked.Butterfly1Unlocked)
@@ -40,19 +46,26 @@ public class LevelUnlocker : MonoBehaviour
         }
         for (int i = 0; i < Mathf.Min(levels.Length, levelsUnlockedButterfly); i++)
         {
-            levels[i].SetActive(true);
+            Button button = levels[i].GetComponent<Button>();
+            button.enabled = true;
+            Image buttonSprite = button.gameObject.GetComponent<Image>();
+            buttonSprite.sprite = unlockedSpriteButterfly;
         }
         for (int i = 0; i < Mathf.Min(levels.Length, levelsUnlockedButterfly-1); i++)
         {
-            checkmarks[i].SetActive(true);
+            Button button = levels[i].GetComponent<Button>();
+            Image buttonSprite = button.gameObject.GetComponent<Image>();
+            buttonSprite.sprite = doneSprite;
         }
     }
     public void UnlockedFlower()
     {
         for (int i = 0; i < levels.Length; i++)
         {
-            levels[i].SetActive(false);
-            checkmarks[i].SetActive(false);
+            Button button = levels[i].GetComponent<Button>();
+            button.enabled = false;
+            Image buttonSprite = button.gameObject.GetComponent<Image>();
+            buttonSprite.sprite = lockedSprite;
             levelsUnlockedFlower = 1;
         }
         if (LevelsUnlocked.Flower1Unlocked)
@@ -65,11 +78,16 @@ public class LevelUnlocker : MonoBehaviour
         }
         for (int i = 0; i < Mathf.Min(levels.Length, levelsUnlockedFlower); i++)
         {
-            levels[i].SetActive(true);
+            Button button = levels[i].GetComponent<Button>();
+            button.enabled = true;
+            Image buttonSprite = button.gameObject.GetComponent<Image>();
+            buttonSprite.sprite = unlockedSpriteFlower;
         }
         for (int i = 0; i < Mathf.Min(levels.Length, levelsUnlockedFlower - 1); i++)
         {
-            checkmarks[i].SetActive(true);
+            Button button = levels[i].GetComponent<Button>();
+            Image buttonSprite = button.gameObject.GetComponent<Image>();
+            buttonSprite.sprite = doneSprite;
         }
     }
 }
