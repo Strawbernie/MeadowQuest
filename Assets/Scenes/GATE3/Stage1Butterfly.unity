@@ -3569,6 +3569,7 @@ MonoBehaviour:
   progressBar: {fileID: 1805135298}
   CorrectSign: {fileID: 871702609}
   IncorrectSign: {fileID: 240040581}
+  winCanvas: {fileID: 1774948617}
 --- !u!1 &1320501125
 GameObject:
   m_ObjectHideFlags: 0

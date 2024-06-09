@@ -6,9 +6,6 @@ using UnityEngine.Android;
 public class ARManager : MonoBehaviour
 {
     public GameObject ARObject;
-    Camera ARCamera;
-
-    public MapButton mapBack;
     private void Awake()
     {
         if (!LevelsUnlocked.ARUnlocked)
@@ -22,10 +19,4 @@ public class ARManager : MonoBehaviour
             ARObject.SetActive(false);
         }
     }
-    void Start()
-    {
-        ARCamera = ARObject.GetComponentInChildren<Camera>();
-        mapBack.canvasTrue = ARCamera.gameObject;
-    }
-
 }
