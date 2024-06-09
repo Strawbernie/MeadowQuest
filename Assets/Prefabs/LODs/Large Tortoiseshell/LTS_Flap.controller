@@ -10,8 +10,8 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 4430971509938480163}
-    m_Position: {x: 260, y: 120, z: 0}
+    m_State: {fileID: 1224306014113394599}
+    m_Position: {x: 270, y: 120, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -21,7 +21,7 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 4430971509938480163}
+  m_DefaultState: {fileID: 1224306014113394599}
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -44,14 +44,14 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1102 &4430971509938480163
+--- !u!1102 &1224306014113394599
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Large TortoiseShell|Armature_LOD0Action_005
+  m_Name: PaintedLady_001|Armature_LOD0Action_001
   m_Speed: 3
   m_CycleOffset: 0
   m_Transitions: []
@@ -64,7 +64,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 5128165253534618528, guid: 0d234ebec9a75e3449e16b5a294edd43,
+  m_Motion: {fileID: 9138261549306009251, guid: 671f14e4c9556614cae70bfe6e5447b7,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
