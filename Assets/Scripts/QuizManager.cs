@@ -72,7 +72,7 @@ public class QuizManager : MonoBehaviour
 
         QuestionImage.sprite = QnA[currentQuestion].QuestionSprite;
         SetAnswers();
-        StartCoroutine(removeDelay());
+        StartCoroutine(removeDelay()); 
     }
     IEnumerator removeDelay()
     {
