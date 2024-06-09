@@ -22,7 +22,6 @@ public class AnswerScript : MonoBehaviour
         }
         else
         {
-            quizManager.Incorrect();
             //If the question is incorrect the incorrect image will show ontop
             incorrectImage.SetActive(true);
         }

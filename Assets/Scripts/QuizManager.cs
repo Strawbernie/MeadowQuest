@@ -17,6 +17,8 @@ public class QuizManager : MonoBehaviour
 
     public GameObject CorrectSign;
     public GameObject IncorrectSign;
+    public GameObject winCanvas;
+
 
     private void Start()
     {
@@ -34,13 +36,6 @@ public class QuizManager : MonoBehaviour
         QnA.RemoveAt(currentQuestion);
         progressBar.value++;
         generateQuestion();
-    }
-
-    public void Incorrect()
-    {
-        // if the answer is incorrect it stays with the current question
-
-        IncorrectSign.SetActive(true);
     }
 
     void SetAnswers()
@@ -68,10 +63,17 @@ public class QuizManager : MonoBehaviour
     // how it generates a new question
    void generateQuestion()
     {
-        currentQuestion = Random.Range(0, QnA.Count);
+        if (QnA.Count > 0)
+        {
+            currentQuestion = Random.Range(0, QnA.Count);
 
-        QuestionImage.sprite = QnA[currentQuestion].QuestionSprite;
-        SetAnswers();
+            QuestionImage.sprite = QnA[currentQuestion].QuestionSprite;
+            SetAnswers();
+        }
+        else
+        {
+            winCanvas.SetActive(true);
+        }
         StartCoroutine(removeDelay());
     }
     IEnumerator removeDelay()

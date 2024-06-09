@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class LevelsUnlocked
 {
+    public static bool ARUnlocked;
     public static bool TutorialUnlocked;
     public static bool Butterfly1Unlocked;
     public static bool Butterfly2Unlocked;

@@ -9,6 +9,7 @@ public class FlowerGameManager : MonoBehaviour
     public Drop dropSection3;
     public GameObject winCanvas;
     public FailTryAgain[] listElements;
+
     public void checkWin()
     {
         if (dropSection1.IsCorrect &&  dropSection2.IsCorrect && dropSection3.IsCorrect)

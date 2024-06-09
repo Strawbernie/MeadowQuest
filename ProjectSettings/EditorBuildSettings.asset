@@ -29,8 +29,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GATE3/Stage1Flower.unity
     guid: e003876573be1034295ae26ff0b48ddf
-  - enabled: 1
-    path: Assets/Scenes/GATE3/Stage2Butterfly.unity
+  - enabled: 0
+    path: Assets/Scenes/GATE3/Stage2ButterflyOld.unity
     guid: 164df9a7fe4e21947ab3bf633c492025
   - enabled: 1
     path: Assets/Scenes/GATE3/Stage2Flower.unity

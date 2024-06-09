@@ -17,7 +17,6 @@ public class TutorialManager : MonoBehaviour, IPointerDownHandler
     public GameObject canvasEncyclopedia;
     public GameObject canvasMain;
     public GameObject canvasMain1;
-    public GameObject canvasMain2;
     int tutorialStage;
 
     public void OnPointerDown(PointerEventData eventData)
@@ -41,7 +40,6 @@ public class TutorialManager : MonoBehaviour, IPointerDownHandler
                     canvasEncyclopedia.SetActive(true);
                     canvasMain.SetActive(false);
                     canvasMain1.SetActive(false);
-                    canvasMain2.SetActive(false);
                     break;
                 case 3:
                     Sections.SetActive(false);
@@ -49,7 +47,6 @@ public class TutorialManager : MonoBehaviour, IPointerDownHandler
                     canvasEncyclopedia.SetActive(false);
                     canvasMain.SetActive(true);
                     canvasMain1.SetActive(true);
-                    canvasMain2.SetActive(true);
                     break;
                 case 4:
                     ARButton.SetActive(false);
