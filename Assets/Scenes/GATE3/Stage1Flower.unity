@@ -5651,6 +5651,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6403437153039974928, guid: e322a8c7da5cd754ab7bb9b3a9ad3d73,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6677721163965445959, guid: e322a8c7da5cd754ab7bb9b3a9ad3d73,
         type: 3}
       propertyPath: canvas
