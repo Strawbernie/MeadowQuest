@@ -8,7 +8,8 @@ public class DontDestroy : MonoBehaviour
     public GameObject Instruction;
     private void Update()
     {
-     if(ArObjects.activeSelf)
+        GameObject MapCamera = GameObject.Find("OrthographicCamera");
+     if(ArObjects.activeSelf || MapCamera!=null)
         {
             Instruction.SetActive(false);
         }
