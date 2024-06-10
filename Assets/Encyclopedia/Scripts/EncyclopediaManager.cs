@@ -31,14 +31,6 @@ public class EncyclopediaManager : MonoBehaviour
                 itemSlot.unlockedItem = true;
                 firstLevel.gameObject.SetActive(true);
                 firstLevel.UpdateInfo();
-                itemSlot.UpdateInfo();
-            }
-        }
-        if (LevelsUnlocked.Butterfly2Unlocked)
-        {
-            foreach (ItemSlot itemSlot in butterflyLevel2Unlocks)
-            {
-                itemSlot.unlockedItem = true;
                 allButterflies.gameObject.SetActive(true);
                 allButterflies.UpdateInfo();
                 itemSlot.UpdateInfo();
@@ -64,7 +56,7 @@ public class EncyclopediaManager : MonoBehaviour
                 itemSlot.UpdateInfo();
             }
         }
-        if(LevelsUnlocked.Flower2Unlocked && LevelsUnlocked.Butterfly2Unlocked)
+        if(LevelsUnlocked.Flower2Unlocked && LevelsUnlocked.Butterfly1Unlocked)
         {
             allLevels.gameObject.SetActive(true);
             allLevels.UpdateInfo();

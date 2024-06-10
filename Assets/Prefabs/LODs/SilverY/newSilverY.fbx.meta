@@ -33,9 +33,9 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: SilverY|Armature_LOD0Action.001
-      takeName: SilverY|Armature_LOD0Action.001
-      internalID: 7839118090180099308
+      name: SilverY|SilverY|SilverY|Armature_LOD0Action.001
+      takeName: SilverY|SilverY|SilverY|Armature_LOD0Action.001
+      internalID: 6468882521644296496
       firstFrame: 0
       lastFrame: 39
       wrapMode: 0
@@ -62,9 +62,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: SilverY|Armature_LOD0Action.002
-      takeName: SilverY|Armature_LOD0Action.002
-      internalID: -2959996844623004337
+      name: SilverY|SilverY|SilverY|Armature_LOD0Action.002
+      takeName: SilverY|SilverY|SilverY|Armature_LOD0Action.002
+      internalID: 221264147074381541
       firstFrame: 0
       lastFrame: 39
       wrapMode: 0
@@ -91,9 +91,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: SilverY|Armature_LOD0Action.003
-      takeName: SilverY|Armature_LOD0Action.003
-      internalID: -7580658285510437829
+      name: SilverY|SilverY|SilverY|Armature_LOD0Action.003
+      takeName: SilverY|SilverY|SilverY|Armature_LOD0Action.003
+      internalID: 3211465255567068979
       firstFrame: 0
       lastFrame: 39
       wrapMode: 0
@@ -120,9 +120,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: SilverY|Armature_LOD0Action.004
-      takeName: SilverY|Armature_LOD0Action.004
-      internalID: 4990117976618755542
+      name: SilverY|SilverY|SilverY|Armature_LOD0Action.004
+      takeName: SilverY|SilverY|SilverY|Armature_LOD0Action.004
+      internalID: -894921387438084604
       firstFrame: 0
       lastFrame: 39
       wrapMode: 0
@@ -149,9 +149,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: SilverY|Armature_LOD0Action.005
-      takeName: SilverY|Armature_LOD0Action.005
-      internalID: 1109141803422923763
+      name: SilverY|SilverY|SilverY|Armature_LOD0Action.005
+      takeName: SilverY|SilverY|SilverY|Armature_LOD0Action.005
+      internalID: -4993733369203197276
       firstFrame: 0
       lastFrame: 39
       wrapMode: 0
@@ -178,9 +178,38 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: SilverY|Armature_LOD0Action.006
-      takeName: SilverY|Armature_LOD0Action.006
-      internalID: 5462583358092114261
+      name: SilverY|SilverY|SilverY|Armature_LOD0Action.006
+      takeName: SilverY|SilverY|SilverY|Armature_LOD0Action.006
+      internalID: -1668697509180009635
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: SilverY|SilverY|SilverY|Armature_LOD0Action.007
+      takeName: SilverY|SilverY|SilverY|Armature_LOD0Action.007
+      internalID: 5947297197825502135
       firstFrame: 0
       lastFrame: 39
       wrapMode: 0
