@@ -9,6 +9,7 @@ public class PlacementEditorWindow : EditorWindow
     private Texture2D noiseMapTexture;
     private float density = 0.5f;
     private GameObject prefab;
+    public Transform placedObjectParent;
 
     [MenuItem("Tools/Wizards Code/Tutorial/Plant Placement")]
 
@@ -46,7 +47,7 @@ public class PlacementEditorWindow : EditorWindow
 
     public static void PlaceObject(Terrain terrain, Texture2D noiseMapTexture, float density, GameObject prefab)
     {
-        Transform parent = new GameObject("PlacedObjects").transform;
+         Transform placedObjectParent = new GameObject("PlacedObjects").transform;
 
         for (int x = 0; x < terrain.terrainData.size.x; x++)
         {
@@ -61,9 +62,14 @@ public class PlacementEditorWindow : EditorWindow
                     pos.y = terrain.terrainData.GetInterpolatedHeight(x / terrain.terrainData.size.x, z / (float)terrain.terrainData.size.y);
 
                     GameObject go = Instantiate(prefab, pos, Quaternion.identity);
-                    go.transform.SetParent(parent);
+                    go.transform.SetParent(placedObjectParent);
                 }
             }
         }
+    }
+
+    private void Start()
+    {
+        Debug.Log(placedObjectParent.name + " has " + placedObjectParent.transform.childCount + " children");
     }
 }
